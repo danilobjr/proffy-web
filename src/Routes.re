@@ -6,6 +6,7 @@ let make = () => {
 
   switch (url.path) {
   | [] => <Landing />
+  | ["study"] => <TeacherList />
   | _ => "Not found" |> React.string
   };
 };
