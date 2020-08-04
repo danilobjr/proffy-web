@@ -6,12 +6,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+
+    "re:build": "bsb -make-world -clean-world",
+    "re:watch": "bsb -make-world -clean-world -w"
   },
   "dependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "reason-react": "0.9.1"
+  },
+  "devDependencies": {
+    "bs-platform": "8.2.0"
   },
   "eslintConfig": {
     "extends": "react-app"
