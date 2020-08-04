@@ -25,7 +25,7 @@ let make = () =>
           "Learn" -> React.string
         </Link>
 
-        <Link className="give-classes" href="/give-classes">
+        <Link className="give-classes" href="/teach">
           <Icon name={Teach} alt="teach" />
           "Teach" -> React.string
         </Link>
