@@ -18,10 +18,14 @@ requireCSS("../styles/teacher-form.css");
 // };
 
 type schedule = {
-  weekDay: int,
-  from: int,
-  to_: int,
+  uuid: string,
+  weekDay: string,
+  from: string,
+  to_: string,
 };
+
+type updatedValue = string;
+type callback = (schedule, updatedValue) => schedule;
 
 [@react.component]
 let make = () => {
@@ -31,25 +35,51 @@ let make = () => {
   let (profile, setProfile) = React.useState(_ => "");
   let (cost, setCost) = React.useState(_ => "");
   let (subject, setSubject) = React.useState(_ => "");
+  let (schedule, setSchedule) = React.useState(_ => [|
+    { uuid: "default", weekDay: "", from: "", to_: "" }
+  |]);
 
   let handleChange = (handler, e) => {
     let value = ReactEvent.Form.target(e)##value;
     handler(_ => value);
   };
 
-  let scheduleData = [|
-    { weekDay: 0, from: 540, to_: 600 }
-  |];
+  let setScheduleItemValue = (uuid, callback: callback, e) => {
+    let updatedValue = ReactEvent.Form.target(e)##value;
+
+    let updatedScheduleItems =
+      schedule
+      |> Array.map(s => {
+        switch (s.uuid === uuid) {
+        | true => callback(s, updatedValue)
+        | false => s
+        };
+      });
+
+    setSchedule(_ => updatedScheduleItems);
+  };
+
+  let handleSubmit = e => {
+    e |> ReactEvent.Form.preventDefault;
+
+    Js.log(name);
+    Js.log(avatar);
+    Js.log(whatsapp);
+    Js.log(profile);
+    Js.log(cost);
+    Js.log(subject);
+    Js.log(schedule);
+  };
 
   let scheduleItems =
-    scheduleData
+    schedule
     |> Array.map (s =>
-      <div key=string_of_int(s.weekDay) className="schedule-item">
+      <div key=s.weekDay className="schedule-item">
         <Select
           name="week_day"
           label="Week day"
-          value=string_of_int(s.weekDay)
-          onChange={_ => ()}
+          value=s.weekDay
+          onChange={setScheduleItemValue(s.uuid, (s', value) => { ...s', weekDay: value })}
           options=[|
             { value: "0", label: "Sunday" },
             { value: "1", label: "Monday" },
@@ -64,17 +94,17 @@ let make = () => {
         <Input
           name="from"
           label="From"
-          // type="time"
-          value=string_of_int(s.from)
-          onChange={_ => ()}
+          type_="time"
+          value=s.from
+          onChange={setScheduleItemValue(s.uuid, (s', value) => { ...s', from: value })}
         />
 
         <Input
           name="to"
           label="To"
-          // type="time"
-          value=string_of_int(s.to_)
-          onChange={_ => ()}
+          type_="time"
+          value=s.to_
+          onChange={setScheduleItemValue(s.uuid, (s', value) => { ...s', to_: value })}
         />
       </div>
     )
@@ -88,8 +118,9 @@ let make = () => {
       >
         React.null
       </PageHeader>
+
       <main>
-        <form>
+        <form onSubmit=handleSubmit>
           <fieldset>
             <legend>"Personal data" -> React.string</legend>
 
