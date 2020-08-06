@@ -5,7 +5,13 @@ open Utils;
 requireCSS("../styles/page-header.css");
 
 [@react.component]
-let make = (~children, ~title: string) => {
+let make = (~title, ~subtitle: option(string)=?, ~children) => {
+  let subtitle' =
+    switch subtitle {
+    | Some(s) => <p>s -> React.string</p>
+    | None => React.null
+    };
+
   <header className="page-header">
     <div className="top-bar-container">
       <Link href="/">
@@ -17,6 +23,7 @@ let make = (~children, ~title: string) => {
 
     <div className="header-content">
       <strong>title -> React.string</strong>
+      subtitle'
       children
     </div>
   </header>;
