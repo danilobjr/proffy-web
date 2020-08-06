@@ -2,11 +2,25 @@ open Utils;
 
 requireCSS("../styles/teacher-form.css");
 
+// let useForm = (initialState) => {
+//   let (state, setState) = React.useState(_ => initialState);
+
+//   let handleChange = (e: ReactEvent.Form.t) => {
+//     let value = ReactEvent.Form.target(e)##value;
+//     let fieldName = ReactEvent.Form.target(e)##name;
+
+//     setState(currentState => {
+//       ...currentState, [fieldName]: value
+//     })
+//   };
+// };
+
 [@react.component]
 let make = () => {
   let (name, setName) = React.useState(_ => "");
   let (avatar, setAvatar) = React.useState(_ => "");
   let (whatsapp, setWhatsapp) = React.useState(_ => "");
+  let (bio, setBio) = React.useState(_ => "");
 
   let handleChange = (handler, e) => {
     let value = ReactEvent.Form.target(e)##value;
@@ -45,6 +59,13 @@ let make = () => {
               label="WhatsApp"
               value=whatsapp
               onChange=handleChange(setWhatsapp)
+            />
+
+            <Textarea
+              name="bio"
+              label="Biografia"
+              value=bio
+              onChange=handleChange(setBio)
             />
           </fieldset>
         </form>
