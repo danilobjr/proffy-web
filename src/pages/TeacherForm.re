@@ -64,6 +64,13 @@ let make = () => {
     setSchedule(_ => updatedScheduleItems);
   };
 
+  let handleNewScheduleClick = _ => {
+    setSchedule(schedules => Array.append(
+      schedules,
+      [| { uuid: uuid(), weekDay: "", from: "", to_: "" } |])
+    );
+  };
+
   let handleSubmit = e => {
     e |> ReactEvent.Form.preventDefault;
 
@@ -71,8 +78,8 @@ let make = () => {
     Js.log(avatar);
     Js.log(whatsapp);
     Js.log(profile);
-    Js.log(cost);
     Js.log(subject);
+    Js.log(cost);
     Js.log(schedule);
   };
 
@@ -193,7 +200,7 @@ let make = () => {
           <fieldset>
             <legend>
               "Schedule" -> React.string
-              <button type_="button">
+              <button type_="button" onClick=handleNewScheduleClick>
                 "+ New" -> React.string
               </button>
             </legend>
