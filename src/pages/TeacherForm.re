@@ -1,4 +1,5 @@
 open Utils;
+open Select;
 
 requireCSS("../styles/teacher-form.css");
 
@@ -21,6 +22,8 @@ let make = () => {
   let (avatar, setAvatar) = React.useState(_ => "");
   let (whatsapp, setWhatsapp) = React.useState(_ => "");
   let (profile, setProfile) = React.useState(_ => "");
+  let (cost, setCost) = React.useState(_ => "");
+  let (subject, setSubject) = React.useState(_ => "");
 
   let handleChange = (handler, e) => {
     let value = ReactEvent.Form.target(e)##value;
@@ -66,6 +69,38 @@ let make = () => {
               label="Profile"
               value=profile
               onChange=handleChange(setProfile)
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>"Lesson" -> React.string</legend>
+
+            <Select
+              name="subject"
+              label="Subject"
+              value=subject
+              onChange=handleChange(setSubject)
+              options=[|
+                { value: "Arts", label: "Arts" },
+                { value: "Biology", label: "Biology" },
+                { value: "Science", label: "Science" },
+                { value: "Physical Education", label: "Physical Education" },
+                { value: "Philosofy", label: "Philosofy" },
+                { value: "Physics", label: "Physics" },
+                { value: "Geography", label: "Geography" },
+                { value: "History", label: "History" },
+                { value: "English", label: "English" },
+                { value: "Math", label: "Math" },
+                { value: "Chemistry", label: "Chemistry" },
+                { value: "Sociology", label: "Sociology" }
+              |]
+            />
+
+            <Input
+              name="cost"
+              label="Cost per hour"
+              value=cost
+              onChange=handleChange(setCost)
             />
           </fieldset>
         </form>
