@@ -18,7 +18,7 @@ requireCSS("../styles/teacher-form.css");
 // };
 
 type schedule = {
-  uuid: string,
+  uuid: float,
   weekDay: string,
   from: string,
   to_: string,
@@ -26,6 +26,11 @@ type schedule = {
 
 type updatedValue = string;
 type callback = (schedule, updatedValue) => schedule;
+
+let uuid = () => {
+  let now = Js.Date.make();
+  Js.Date.getTime(now);
+};
 
 [@react.component]
 let make = () => {
@@ -36,7 +41,7 @@ let make = () => {
   let (cost, setCost) = React.useState(_ => "");
   let (subject, setSubject) = React.useState(_ => "");
   let (schedule, setSchedule) = React.useState(_ => [|
-    { uuid: "default", weekDay: "", from: "", to_: "" }
+    { uuid: uuid(), weekDay: "", from: "", to_: "" }
   |]);
 
   let handleChange = (handler, e) => {
@@ -188,7 +193,6 @@ let make = () => {
           <fieldset>
             <legend>
               "Schedule" -> React.string
-
               <button type_="button">
                 "+ New" -> React.string
               </button>
