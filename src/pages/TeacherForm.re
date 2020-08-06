@@ -16,6 +16,12 @@ requireCSS("../styles/teacher-form.css");
 //   };
 // };
 
+type schedule = {
+  weekDay: int,
+  from: int,
+  to_: int,
+};
+
 [@react.component]
 let make = () => {
   let (name, setName) = React.useState(_ => "");
@@ -29,6 +35,49 @@ let make = () => {
     let value = ReactEvent.Form.target(e)##value;
     handler(_ => value);
   };
+
+  let scheduleData = [|
+    { weekDay: 0, from: 540, to_: 600 }
+  |];
+
+  let scheduleItems =
+    scheduleData
+    |> Array.map (s =>
+      <div key=string_of_int(s.weekDay) className="schedule-item">
+        <Select
+          name="week_day"
+          label="Week day"
+          value=string_of_int(s.weekDay)
+          onChange={_ => ()}
+          options=[|
+            { value: "0", label: "Sunday" },
+            { value: "1", label: "Monday" },
+            { value: "2", label: "Tuesday" },
+            { value: "3", label: "Wednesday" },
+            { value: "4", label: "Thursday" },
+            { value: "5", label: "Friday" },
+            { value: "6", label: "Saturday" }
+          |]
+        />
+
+        <Input
+          name="from"
+          label="From"
+          // type="time"
+          value=string_of_int(s.from)
+          onChange={_ => ()}
+        />
+
+        <Input
+          name="to"
+          label="To"
+          // type="time"
+          value=string_of_int(s.to_)
+          onChange={_ => ()}
+        />
+      </div>
+    )
+    |> React.array;
 
   <div>
     <div id="page-teacher-form" className="container">
@@ -102,6 +151,18 @@ let make = () => {
               value=cost
               onChange=handleChange(setCost)
             />
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              "Schedule" -> React.string
+
+              <button type_="button">
+                "+ New" -> React.string
+              </button>
+            </legend>
+
+            {scheduleItems}
           </fieldset>
         </form>
       </main>
