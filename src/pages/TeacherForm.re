@@ -20,7 +20,7 @@ let make = () => {
   let (name, setName) = React.useState(_ => "");
   let (avatar, setAvatar) = React.useState(_ => "");
   let (whatsapp, setWhatsapp) = React.useState(_ => "");
-  let (bio, setBio) = React.useState(_ => "");
+  let (profile, setProfile) = React.useState(_ => "");
 
   let handleChange = (handler, e) => {
     let value = ReactEvent.Form.target(e)##value;
@@ -62,10 +62,10 @@ let make = () => {
             />
 
             <Textarea
-              name="bio"
-              label="Biografia"
-              value=bio
-              onChange=handleChange(setBio)
+              name="profile"
+              label="Profile"
+              value=profile
+              onChange=handleChange(setProfile)
             />
           </fieldset>
         </form>
