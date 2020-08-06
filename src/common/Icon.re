@@ -6,6 +6,7 @@ type image =
   | Heart
   | Study
   | Teach
+  | Warning
   | Whatsapp;
 
 [@react.component]
@@ -17,6 +18,7 @@ let make = (~className="", ~name, ~alt="") => {
     | Heart => "heart"
     | Study => "study"
     | Teach => "teach"
+    | Warning => "warning"
     | Whatsapp => "whatsapp"
     };
 

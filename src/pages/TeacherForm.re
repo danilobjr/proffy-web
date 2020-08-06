@@ -1,5 +1,6 @@
-open Utils;
+open Icon;
 open Select;
+open Utils;
 
 requireCSS("../styles/teacher-form.css");
 
@@ -164,6 +165,19 @@ let make = () => {
 
             {scheduleItems}
           </fieldset>
+
+          <footer>
+            <p>
+              <Icon name=Warning alt="Warning"/>
+              "Important!" -> React.string
+              <br />
+              "Fulfill all the information." -> React.string
+            </p>
+
+            <button type_="submit">
+              "Apply" -> React.string
+            </button>
+          </footer>
         </form>
       </main>
     </div>
