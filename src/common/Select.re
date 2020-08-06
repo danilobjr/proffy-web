@@ -19,12 +19,12 @@ let make = (~label, ~name, ~options, ~value, ~onChange) => {
 
   <div className="select-block">
     <label htmlFor=name>label -> React.string</label>
-    <select value id=name onChange>
+    <select id=name value onChange>
       <option
-        value=""
+        default=true
         disabled=true
         hidden=true
-        selected=true
+        value=""
       >
         "Select an option" -> React.string
       </option>
