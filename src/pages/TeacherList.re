@@ -1,12 +1,20 @@
-// import PageHeader from "../../components/PageHeader";
-// import TeacherItem from "../../components/TeacherItem";
-
 open Utils;
 
 requireCSS("../styles/teacher-list.css");
 
 [@react.component]
 let make = () => {
+  React.useEffect(() => {
+    Api.Teachers.fetch(~subject="Math", ~weekDay="1", ~time="540", result => {
+      switch result {
+      | Ok(teachers) => Js.log(teachers)
+      | Error(error) => Js.log(error)
+      };
+    });
+
+    Some(_ => ());
+  });
+
   <div id="page-teacher-list" className="container">
     <PageHeader title="Available proffys">
       <form id="search-teachers">

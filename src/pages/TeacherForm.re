@@ -192,6 +192,7 @@ let make = () => {
             <Input
               name="cost"
               label="Cost per hour"
+              type_="number"
               value=cost
               onChange=handleChange(setCost)
             />

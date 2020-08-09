@@ -21,6 +21,8 @@
   "suffix": ".js",
   "namespace": true,
   "bs-dependencies": [
+    "@glennsl/bs-json",
+    "bs-fetch",
     "reason-react"
   ],
   "ppx-flags": [],
