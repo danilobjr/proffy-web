@@ -17,7 +17,7 @@ let make = (~label, ~name, ~options, ~value, ~onChange) => {
       </option>
     });
 
-  <div className="select-block">
+  <div className="select">
     <label htmlFor=name>label -> React.string</label>
     <select id=name value onChange>
       <option

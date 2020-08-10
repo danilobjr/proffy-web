@@ -1,16 +1,16 @@
-.input-block {
+.input {
   position: relative;
 }
 
-.input-block + .input-block {
+.input + .input {
   margin-top: 1.4rem;
 }
 
-.input-block label {
+.input label {
   font-size: 1.4rem;
 }
 
-.input-block input {
+.input input {
   width: 100%;
   height: 5.6rem;
   margin-top: 0.8rem;
@@ -22,7 +22,7 @@
   font: 1.6rem Archivo;
 }
 
-.input-block:focus-within::after {
+.input:focus-within::after {
   width: calc(100% - 3.2rem);
   height: 2px;
   content: '';
