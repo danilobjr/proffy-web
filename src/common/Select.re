@@ -1,6 +1,6 @@
 open Utils;
 
-requireCSS("../styles/select.css");
+requireCSS("../styles/common/select.css");
 
 type option = {
   label: string,

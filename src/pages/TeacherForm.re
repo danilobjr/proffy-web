@@ -2,7 +2,7 @@ open Icon;
 open Select;
 open Utils;
 
-requireCSS("../styles/teacher-form.css");
+requireCSS("../styles/pages/teacher-form.css");
 
 // let useForm = (initialState) => {
 //   let (state, setState) = React.useState(_ => initialState);

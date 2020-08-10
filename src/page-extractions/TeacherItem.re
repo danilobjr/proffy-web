@@ -1,7 +1,7 @@
 open Icon;
 open Utils;
 
-requireCSS("../styles/teacher-item.css");
+requireCSS("../styles/page-extractions/teacher-item.css");
 
 [@react.component]
 let make = () => {

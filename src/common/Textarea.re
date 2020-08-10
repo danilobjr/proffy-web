@@ -1,6 +1,6 @@
 open Utils;
 
-requireCSS("../styles/textarea.css");
+requireCSS("../styles/common/textarea.css");
 
 [@react.component]
 let make = (~label, ~name, ~value, ~onChange) =>

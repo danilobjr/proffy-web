@@ -1,6 +1,6 @@
 open Utils;
 
-requireCSS("../styles/input.css");
+requireCSS("../styles/common/input.css");
 
 [@react.component]
 let make = (~label, ~name, ~type_="text", ~value, ~onChange) =>

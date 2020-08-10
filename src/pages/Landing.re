@@ -2,7 +2,7 @@ open Icon
 open Img
 open Utils
 
-requireCSS("../styles/landing.css")
+requireCSS("../styles/pages/landing.css")
 
 [@react.component]
 let make = () =>

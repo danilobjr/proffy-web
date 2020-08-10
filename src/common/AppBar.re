@@ -2,7 +2,7 @@ open Icon;
 open Img;
 open Utils;
 
-requireCSS("../styles/app-bar.css");
+requireCSS("../styles/common/app-bar.css");
 
 [@react.component]
 let make = (~title, ~subtitle: option(string)=?, ~children) => {

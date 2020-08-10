@@ -1,6 +1,6 @@
 open Utils;
 
-requireCSS("../styles/teacher-list.css");
+requireCSS("../styles/pages/teacher-list.css");
 
 [@react.component]
 let make = () => {
