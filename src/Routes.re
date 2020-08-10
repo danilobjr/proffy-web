@@ -7,7 +7,7 @@ let make = () => {
   switch (url.path) {
   | [] => <Landing />
   | ["teach"] => <TeacherForm />
-  | ["study"] => <TeacherList />
+  | ["learn"] => <TeacherList />
   | _ => "Not found" |> React.string
   };
 };

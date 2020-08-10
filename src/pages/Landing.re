@@ -20,7 +20,7 @@ let make = () =>
       />
 
       <div className="buttons-container">
-        <Link className="study" href="/study">
+        <Link className="learn" href="/learn">
           <Icon name={Study} alt="learn" />
           "Learn" -> React.string
         </Link>
