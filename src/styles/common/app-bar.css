@@ -5,13 +5,12 @@
 }
 
 .app-bar .container {
-  width: 90%;
-  margin: 0 auto;
+  height: 64px;
+  padding: 0 2rem;
+  color: var(--color-text-in-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-text-in-primary);
-  padding: 1.6rem 0;
 }
 
 .app-bar .container a {
@@ -51,10 +50,6 @@
 @media (min-width: 700px) {
   .app-bar {
     height: 340px;
-  }
-
-  .app-bar .container {
-    max-width: 1100px;
   }
 
   .app-bar .content {

@@ -15,7 +15,8 @@ let make = () => {
     Some(_ => ());
   });
 
-  <div id="page-teacher-list" className="container">
+  // <div id="page-teacher-list">
+  <Page id="teacher-list">
     <AppBar title="Available proffys">
       <form id="search-teachers">
         <div className="input-block">
@@ -35,12 +36,12 @@ let make = () => {
       </form>
     </AppBar>
 
-    <main>
+    <Container>
       <TeacherItem />
       <TeacherItem />
       <TeacherItem />
       <TeacherItem />
       <TeacherItem />
-    </main>
-  </div>;
+    </Container>
+  </Page>;
 };

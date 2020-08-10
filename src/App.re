@@ -7,7 +7,7 @@ let make = () => {
   let route = Router.useRoute();
 
   switch (route) {
-  | Some(Home) => <LandingPage />
+  | Some(Home) => <Landing />
   | Some(Learn) => <TeacherList />
   | Some(Teach) => <TeacherForm />
   | None => "Page Not Found" |> React.string

@@ -2,12 +2,12 @@ open Icon
 open Img
 open Utils
 
-requireCSS("../styles/pages/landing-page.css");
+requireCSS("../styles/pages/landing.css");
 
 [@react.component]
 let make = () =>
-  <div className="landing-page">
-    <main className="content">
+  <Page id="landing">
+    <Container>
       <div className="logo">
         <Img name=Logo alt="proffy logo" />
         <h2>"Your online lessons platform" -> React.string</h2>
@@ -35,7 +35,5 @@ let make = () =>
         "More than 200 lessons scheduled" -> React.string
         <Icon name=Heart alt="heart" />
       </span>
-    </main>
-  </div>
-
-
+    </Container>
+  </Page>

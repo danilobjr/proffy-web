@@ -1,32 +1,25 @@
-#page-teacher-list {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-#search-teachers {
+#teacher-list #search-teachers {
   margin-top: 3.2rem;
-
 }
 
-#search-teachers label {
+#teacher-list #search-teachers label {
   color: var(--color-text-in-primary);
 }
 
-#search-teachers .input-block {
+#teacher-list #search-teachers .input-block {
   position: relative;
 }
 
-#search-teachers .input-block  + .input-block{
+#teacher-list #search-teachers .input-block  + .input-block{
   margin-top: 1.4rem;
 }
 
 
-#search-teachers .input-block label {
+#teacher-list #search-teachers .input-block label {
   font-size: 1.4rem;
 }
 
-#search-teachers .input-block input {
+#teacher-list #search-teachers .input-block input {
   width: 100%;
   height: 5.6rem;
   margin-top: 0.8rem;
@@ -38,7 +31,7 @@
   font: 1.6rem Archivo;
 }
 
-#search-teachers .input-block:focus-within::after {
+#teacher-list #search-teachers .input-block:focus-within::after {
   width: calc(100% - 3.2rem);
   height: 2px;
   content: '';
@@ -49,7 +42,7 @@
   bottom: 0;
 }
 
-#page-teacher-list main {
+#teacher-list #page-teacher-list main {
   margin:  3.2rem auto;
   width: 90%;
 }
@@ -57,12 +50,12 @@
 
 
 @media (min-width: 700px) {
-  #page-teacher-list{
+  #teacher-list {
     max-width: 100%;
   }
 
 
-  #search-teachers {
+  #teacher-list #search-teachers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
@@ -70,11 +63,11 @@
     bottom: -28px;
   }
 
-  #search-teachers .input-block  + .input-block{
+  #teacher-list #search-teachers .input-block  + .input-block{
     margin-top: 0 ;
   }
 
-  #page-teacher-list main {
+  #teacher-list #page-teacher-list main {
    padding:  3.2rem 0;
    max-width: 740px;
    margin: 0 auto;

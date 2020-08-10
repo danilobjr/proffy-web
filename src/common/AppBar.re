@@ -13,13 +13,13 @@ let make = (~title, ~subtitle: option(string)=?, ~children) => {
     };
 
   <header className="app-bar">
-    <section className="container">
+    <Container breakpoint=Fluid>
       <Link route=Home>
         <Icon name=Back alt="back" />
       </Link>
 
       <Img name=Logo alt="proffy logo" />
-    </section>
+    </Container>
 
     <div className="content">
       <strong>title -> React.string</strong>
