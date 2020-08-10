@@ -1,4 +1,4 @@
-#page-landing {
+.landing-page {
   width: 100vw;
   height: 100vh;
 
@@ -10,7 +10,7 @@
   background: var(--color-primary);
 }
 
-.logo-container img {
+.logo img {
   height: 10rem;
 }
 
@@ -18,25 +18,25 @@
   width: 100%;
 }
 
-.logo-container {
+.logo {
   text-align: center;
   margin-bottom: 3.2rem;
 }
 
-.logo-container h2 {
+.logo h2 {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 4.6rem;
   margin-top: 0.8rem;
 }
 
-.buttons-container {
+nav {
   display: flex;
   justify-content: center;
   margin: 3.2rem 0;
 }
 
-.buttons-container a {
+nav a {
   width: 30rem;
   height: 10.4rem;
   border-radius: 0.8rem;
@@ -53,35 +53,35 @@
   transition: background-color 0.2s;
 }
 
-.buttons-container a:first-child {
+nav a:first-child {
   margin-right: 1.6rem;
 }
 
-.buttons-container a img {
+nav a img {
   width: 4rem;
 }
 
-.buttons-container a.learn {
+nav a.learn {
   background: var(--color-primary-lighter);
 }
 
-.buttons-container a.give-classes {
+nav a.teach {
   background: var(--color-secundary);
 }
 
-.buttons-container a.learn:hover {
+nav a.learn:hover {
   background: var(--color-primary-light);
 }
 
-.buttons-container a.give-classes:hover {
+nav a.teach:hover {
   background: var(--color-secundary-dark);
 }
 
-.buttons-container a img {
+nav a img {
   margin-right: 2.4rem;
 }
 
-.total-connections {
+.connections {
   font-size: 1.4rem;
 
   display: flex;
@@ -89,12 +89,12 @@
   justify-content: center;
 }
 
-.total-connections img {
+.connections img {
   margin-left: 0.8rem;
 }
 
 @media (min-width: 1100px) {
-  #page-landing-content{
+  .content {
     max-width: 1100px;
 
     display: grid;
@@ -106,18 +106,18 @@
       ;
   }
 
-  .logo-container{
+  .logo {
     grid-area: logo;
     align-self: center;
     margin: 0;
   }
 
-  .logo-container h2 {
+  .logo h2 {
     text-align: initial;
     font-size: 3.6rem;
   }
 
-  .logo-container img {
+  .logo img {
     height: 100%;
   }
 
@@ -126,16 +126,16 @@
     justify-content: end;
   }
 
-  .buttons-container {
+  nav {
     grid-area: buttons;
     justify-content: flex-start;
   }
 
-  .buttons-container a {
+  nav a {
     font-size: 2.4rem;
   }
 
-  .total-connections {
+  .connections {
     grid-area: total;
     justify-content: flex-end;
   }
