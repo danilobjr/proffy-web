@@ -2,7 +2,7 @@ open Icon
 open Img
 open Utils
 
-requireCSS("../styles/pages/landing.css")
+requireCSS("../styles/pages/landing.css");
 
 [@react.component]
 let make = () =>
@@ -20,12 +20,12 @@ let make = () =>
       />
 
       <div className="buttons-container">
-        <Link className="learn" href="/learn">
+        <Link className="learn" route=Learn>
           <Icon name={Study} alt="learn" />
           "Learn" -> React.string
         </Link>
 
-        <Link className="give-classes" href="/teach">
+        <Link className="give-classes" route=Teach>
           <Icon name={Teach} alt="teach" />
           "Teach" -> React.string
         </Link>

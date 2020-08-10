@@ -1,8 +1,13 @@
+let push = (route: Router.t) =>
+  route -> Router.toString -> ReasonReactRouter.push;
+
 [@react.component]
-let make = (~href, ~children, ~className="") => {
+let make = (~route: Router.t, ~children, ~className="") => {
+  let href = route -> Router.toString;
+
   let handleClick = (e) => {
     let href = ReactEvent.Mouse.target(e)##href
-    ReasonReactRouter.push(href)
+    push(href)
   };
 
   <a
@@ -12,4 +17,4 @@ let make = (~href, ~children, ~className="") => {
   >
     {children}
   </a>
-}
+};

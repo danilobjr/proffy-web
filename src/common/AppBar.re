@@ -14,7 +14,7 @@ let make = (~title, ~subtitle: option(string)=?, ~children) => {
 
   <header className="app-bar">
     <section className="container">
-      <Link href="/">
+      <Link route=Home>
         <Icon name=Back alt="back" />
       </Link>
 
