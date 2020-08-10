@@ -16,7 +16,7 @@ let make = () => {
   });
 
   <div id="page-teacher-list" className="container">
-    <PageHeader title="Available proffys">
+    <AppBar title="Available proffys">
       <form id="search-teachers">
         <div className="input-block">
           <label htmlFor="subject"> "Subject"->React.string </label>
@@ -33,7 +33,7 @@ let make = () => {
           <input type_="text" id="time" />
         </div>
       </form>
-    </PageHeader>
+    </AppBar>
 
     <main>
       <TeacherItem />

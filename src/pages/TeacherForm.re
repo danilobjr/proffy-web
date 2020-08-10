@@ -124,12 +124,12 @@ let make = () => {
 
   <div>
     <div id="page-teacher-form" className="container">
-      <PageHeader
+      <AppBar
         title="Let's spread knowlodge to the world!"
         subtitle="First step is to submit this subscription form"
       >
         React.null
-      </PageHeader>
+      </AppBar>
 
       <main>
         <form onSubmit=handleSubmit>
