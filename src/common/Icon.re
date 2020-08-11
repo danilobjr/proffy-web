@@ -4,6 +4,7 @@ type image =
   | Back
   | Check
   | Heart
+  | Smile
   | Study
   | Teach
   | Warning
@@ -16,6 +17,7 @@ let make = (~className="", ~name, ~alt="") => {
     | Back => "back"
     | Check => "check"
     | Heart => "heart"
+    | Smile => "smile"
     | Study => "study"
     | Teach => "teach"
     | Warning => "warning"

@@ -1,6 +1,6 @@
 open Utils
 
-requireCSS("./styles/global.css")
+requireCSS("./styles/global.css");
 
 [@react.component]
 let make = () => {
@@ -9,6 +9,7 @@ let make = () => {
   switch (route) {
   | Some(Home) => <Landing />
   | Some(Learn) => <TeacherList />
+  | Some(Login) => <Login />
   | Some(Teach) => <TeacherForm />
   | None => "Page Not Found" |> React.string
   };

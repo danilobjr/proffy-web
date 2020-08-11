@@ -2,7 +2,8 @@ open Utils;
 
 type image =
   | Landing
-  | Logo;
+  | Logo
+  | Background;
 
 [@react.component]
 let make = (~className="", ~name, ~alt="") => {
@@ -10,6 +11,7 @@ let make = (~className="", ~name, ~alt="") => {
     switch (name) {
     | Landing => "landing"
     | Logo => "logo"
+    | Background => "background"
     };
 
   let src = requireImage("../images/" ++ fileName ++ ".svg");
