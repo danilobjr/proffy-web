@@ -47,3 +47,11 @@ textarea {
   font: 500 .75rem Poppins;
   color: var(--color-text-base);
 }
+
+form .input {
+  margin-top: 1rem;
+}
+
+form .button {
+  margin-top: 2rem;
+}

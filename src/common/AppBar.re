@@ -1,5 +1,4 @@
 open Icon;
-open Img;
 open Utils;
 
 requireCSS("../styles/common/app-bar.css");
@@ -13,18 +12,16 @@ let make = (~title, ~subtitle: option(string)=?, ~children) => {
     };
 
   <header className="app-bar">
-    <Container breakpoint=Fluid>
+    <Container className="top" breakpoint=Fluid>
       <Link route=Home>
         <Icon name=Back alt="back" />
       </Link>
-
-      <Img name=Logo alt="proffy logo" />
     </Container>
 
-    <div className="content">
+    <Container className="content" breakpoint=Medium>
       <strong>title -> React.string</strong>
       subtitle'
       children
-    </div>
+    </Container>
   </header>;
 };
