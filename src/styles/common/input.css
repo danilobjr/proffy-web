@@ -2,10 +2,6 @@
   position: relative;
 }
 
-/* .input + .input {
-  margin-top: 1rem;
-} */
-
 .input label {
   font-size: .85rem;
 }
@@ -24,15 +20,3 @@
   font-size: 1rem;
   color: var(--color-text-base);
 }
-
-/* .input:focus-within::after {
-  position: absolute;
-  bottom: 0;
-  left: 1rem;
-
-  width: calc(100% - 2rem);
-  height: 2px;
-  background: var(--color-primary-light);
-
-  content: '';
-} */

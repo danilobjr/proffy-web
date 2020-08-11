@@ -21,6 +21,8 @@
 
   .teacher-list > .page-content {
     padding-top: .5rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .teacher-list form {
