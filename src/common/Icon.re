@@ -22,6 +22,7 @@ let make = (~className="", ~name, ~alt="") => {
     | Whatsapp => "whatsapp"
     };
 
+  let className = "icon" ++ className;
   let src = requireImage("../icons/" ++ fileName ++ ".svg");
 
   <img className src alt />;

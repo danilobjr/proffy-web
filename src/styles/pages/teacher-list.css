@@ -1,75 +1,44 @@
-#teacher-list #search-teachers {
-  margin-top: 3.2rem;
+.teacher-list form {
+  margin-top: 1.5rem;
 }
 
-#teacher-list #search-teachers label {
+.teacher-list form label {
   color: var(--color-text-in-primary);
 }
 
-#teacher-list #search-teachers .input-block {
-  position: relative;
-}
-
-#teacher-list #search-teachers .input-block  + .input-block{
-  margin-top: 1.4rem;
-}
-
-
-#teacher-list #search-teachers .input-block label {
-  font-size: 1.4rem;
-}
-
-#teacher-list #search-teachers .input-block input {
+.teacher-list form button {
   width: 100%;
-  height: 5.6rem;
-  margin-top: 0.8rem;
-  border-radius: 0.8rem;
-  background: var(--color-input-background);
-  border: 1px solid var(--color-line-in-white);
-  outline: 0;
-  padding: 0 1.6rem;
-  font: 1.6rem Archivo;
 }
 
-#teacher-list #search-teachers .input-block:focus-within::after {
-  width: calc(100% - 3.2rem);
-  height: 2px;
-  content: '';
-  background: var(--color-primary-light);
-  position: absolute;
-  left: 1.5rem;
-  right: 1.6rem;
-  bottom: 0;
+.teacher-list > .page-content {
+  padding-bottom: 2rem;
 }
 
-#teacher-list #page-teacher-list main {
-  margin:  3.2rem auto;
-  width: 90%;
-}
-
-
-
-@media (min-width: 700px) {
-  #teacher-list {
+@media (min-width: 768px) {
+  .teacher-list {
     max-width: 100%;
   }
 
-
-  #teacher-list #search-teachers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 16px;
-    position: absolute;
-    bottom: -28px;
+  .teacher-list > .page-content {
+    padding-top: .5rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 
-  #teacher-list #search-teachers .input-block  + .input-block{
+  .teacher-list form {
+    position: relative;
+    bottom: -3.5rem;
+
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .teacher-list form > * {
+    flex: 1;
+  }
+
+  .teacher-list form > *:not(:first-child) {
     margin-top: 0 ;
-  }
-
-  #teacher-list #page-teacher-list main {
-   padding:  3.2rem 0;
-   max-width: 740px;
-   margin: 0 auto;
+    margin-left: 1rem;
   }
 }

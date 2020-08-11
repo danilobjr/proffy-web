@@ -6,7 +6,7 @@ requireCSS("../styles/pages/landing.css");
 
 [@react.component]
 let make = () =>
-  <Page id="landing">
+  <Page className="landing">
     <Container>
       <div className="logo">
         <Img name=Logo alt="proffy logo" />

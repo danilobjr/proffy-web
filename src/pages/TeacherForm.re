@@ -122,92 +122,93 @@ let make = () => {
     )
     |> React.array;
 
-  <div>
-    <div id="page-teacher-form" className="container">
+    <Page className="teacher-form">
       <AppBar
-        title="Let's spread knowlodge to the world!"
+        title="Let's spread knowlodge!"
         subtitle="First step is to submit this subscription form"
       >
         React.null
       </AppBar>
 
-      <main>
+      <PageContent>
         <form onSubmit=handleSubmit>
-          <fieldset>
-            <legend>"Personal data" -> React.string</legend>
+          <section>
+            <fieldset>
+              <legend>"Personal data" -> React.string</legend>
 
-            <Input
-              name="name"
-              label="Full name"
-              value=name
-              onChange=handleChange(setName)
-            />
+              <Input
+                name="name"
+                label="Full name"
+                value=name
+                onChange=handleChange(setName)
+              />
 
-            <Input
-              name="avatar"
-              label="Avatar"
-              value=avatar
-              onChange=handleChange(setAvatar)
-            />
+              <Input
+                name="avatar"
+                label="Avatar"
+                value=avatar
+                onChange=handleChange(setAvatar)
+              />
 
-            <Input
-              name="whatsapp"
-              label="WhatsApp"
-              value=whatsapp
-              onChange=handleChange(setWhatsapp)
-            />
+              <Input
+                name="whatsapp"
+                label="WhatsApp"
+                value=whatsapp
+                onChange=handleChange(setWhatsapp)
+              />
 
-            <Textarea
-              name="profile"
-              label="Profile"
-              value=profile
-              onChange=handleChange(setProfile)
-            />
-          </fieldset>
+              <Textarea
+                name="profile"
+                label="Profile"
+                value=profile
+                onChange=handleChange(setProfile)
+              />
+            </fieldset>
 
-          <fieldset>
-            <legend>"Lesson" -> React.string</legend>
+            <fieldset>
+              <legend>"Lesson" -> React.string</legend>
 
-            <Select
-              name="subject"
-              label="Subject"
-              value=subject
-              onChange=handleChange(setSubject)
-              options=[|
-                { value: "Arts", label: "Arts" },
-                { value: "Biology", label: "Biology" },
-                { value: "Science", label: "Science" },
-                { value: "Physical Education", label: "Physical Education" },
-                { value: "Philosofy", label: "Philosofy" },
-                { value: "Physics", label: "Physics" },
-                { value: "Geography", label: "Geography" },
-                { value: "History", label: "History" },
-                { value: "English", label: "English" },
-                { value: "Math", label: "Math" },
-                { value: "Chemistry", label: "Chemistry" },
-                { value: "Sociology", label: "Sociology" }
-              |]
-            />
+              <Select
+                name="subject"
+                label="Subject"
+                value=subject
+                onChange=handleChange(setSubject)
+                options=[|
+                  { value: "Arts", label: "Arts" },
+                  { value: "Biology", label: "Biology" },
+                  { value: "Science", label: "Science" },
+                  { value: "Physical Education", label: "Physical Education" },
+                  { value: "Philosofy", label: "Philosofy" },
+                  { value: "Physics", label: "Physics" },
+                  { value: "Geography", label: "Geography" },
+                  { value: "History", label: "History" },
+                  { value: "English", label: "English" },
+                  { value: "Math", label: "Math" },
+                  { value: "Chemistry", label: "Chemistry" },
+                  { value: "Sociology", label: "Sociology" }
+                |]
+              />
 
-            <Input
-              name="cost"
-              label="Cost per hour"
-              type_="number"
-              value=cost
-              onChange=handleChange(setCost)
-            />
-          </fieldset>
+              <Input
+                name="cost"
+                label="Cost per hour"
+                type_="number"
+                value=cost
+                onChange=handleChange(setCost)
+              />
+            </fieldset>
 
-          <fieldset>
-            <legend>
-              "Schedule" -> React.string
-              <button type_="button" onClick=handleNewScheduleClick>
-                "+ New" -> React.string
-              </button>
-            </legend>
+            <fieldset>
+              <legend>
+                "Schedule" -> React.string
+                <button type_="button" onClick=handleNewScheduleClick>
+                  "+ New" -> React.string
+                </button>
+              </legend>
 
-            {scheduleItems}
-          </fieldset>
+              {scheduleItems}
+            </fieldset>
+          </section>
 
           <footer>
             <p>
@@ -217,12 +218,9 @@ let make = () => {
               "Fulfill all the information." -> React.string
             </p>
 
-            <button type_="submit">
-              "Apply" -> React.string
-            </button>
+            <Button text="Apply" />
           </footer>
         </form>
-      </main>
-    </div>
-  </div>;
+      </PageContent>
+    </Page>;
 };

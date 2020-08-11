@@ -18,21 +18,22 @@ let make = () => {
       </div>
     </header>
 
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." -> React.string
-      <br /> <br />
-    </p>
+    <main>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." -> React.string
+      </p>
+    </main>
 
     <footer>
-      <p>
-        "Cost/hour" -> React.string
+      <div>
+        <span>"Per lesson" -> React.string</span>
         <strong>"$ 75.00" -> React.string</strong>
-      </p>
+      </div>
 
-      <button type_="button">
-        <Icon name={Whatsapp} alt="whatsapp" />
-        "Make contact" -> React.string
-      </button>
+      <Button
+        icon=Whatsapp
+        text="Make contact"
+      />
     </footer>
   </article>
 }

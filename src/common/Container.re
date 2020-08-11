@@ -10,17 +10,23 @@ type breakpoint =
   | None;
 
 [@react.component]
-let make = (~breakpoint: breakpoint=None, ~children) => {
-  let className =
+let make = (~className="", ~breakpoint: breakpoint=None, ~children) => {
+  let breakpointClass =
     switch breakpoint {
-    | Small => "-sm"
-    | Medium => "-md"
-    | Large => "-lg"
-    | Fluid => "-fluid"
+    | Small => " -sm"
+    | Medium => " -md"
+    | Large => " -lg"
+    | Fluid => " -fluid"
     | None => ""
     };
 
-  let className = "container" ++ " " ++ className;
+  let customClassName =
+    switch className {
+    | "" => ""
+    | name => " " ++ name
+    };
+
+  let className = "container" ++ breakpointClass ++ customClassName;
 
   <div className>children</div>
 };

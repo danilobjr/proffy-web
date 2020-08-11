@@ -1,36 +1,36 @@
-#landing.page {
+.landing.page {
   background: var(--color-primary);
   color: var(--color-text-in-primary);
 
   justify-content: center;
 }
 
-#landing .container {
+.landing .container {
   text-align: center;
 }
 
-#landing .logo {
+.landing .logo {
   text-align: center;
 }
 
-#landing .logo img {
+.landing .logo img {
   width: 14rem;
 }
 
-#landing .logo h2 {
+.landing .logo h2 {
   margin-top: 1.2rem;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.2rem;
 }
 
-#landing .hero-image {
+.landing .hero-image {
   width: 100%;
   max-width: 43rem;
   margin-top: 4rem;
 }
 
-#landing .connections {
+.landing .connections {
   margin-top: 1rem;
 
   font-size: .875rem;
@@ -40,7 +40,7 @@
   justify-content: center;
 }
 
-#landing nav {
+.landing nav {
   padding: 0 .5rem;
   margin-top: 4rem;
 
@@ -48,7 +48,7 @@
   justify-content: center;
 }
 
-#landing nav a {
+.landing nav a {
   width: 18rem;
   height: 5rem;
   border-radius: 0.5rem;
@@ -64,37 +64,37 @@
   transition: background-color 0.2s;
 }
 
-#landing nav a:last-child {
+.landing nav a:last-child {
   margin-left: 1rem;
 }
 
-#landing nav a img {
+.landing nav a img {
   width: 2.5rem;
   margin-right: 1.5rem;
 }
 
-#landing nav a.learn {
+.landing nav a.learn {
   background: var(--color-primary-lighter);
 }
 
-#landing nav a.teach {
+.landing nav a.teach {
   background: var(--color-secundary);
 }
 
-#landing nav a.learn:hover {
+.landing nav a.learn:hover {
   background: var(--color-primary-light);
 }
 
-#landing nav a.teach:hover {
+.landing nav a.teach:hover {
   background: var(--color-secundary-dark);
 }
 
-#landing .connections img {
+.landing .connections img {
   margin-left: 0.5rem;
 }
 
 @media (min-width: 1200px) {
-  #landing .container {
+  .landing .container {
     display: grid;
     grid-template-rows: 350px 1fr;
     grid-template-columns: 2fr 1fr 1fr;
@@ -103,32 +103,32 @@
       "buttons total total";
   }
 
-  #landing .logo {
+  .landing .logo {
     grid-area: logo;
     align-self: center;
     margin-bottom: 3rem;
   }
 
-  #landing .logo h2 {
+  .landing .logo h2 {
     font-size: 1.4rem;
     line-height: 1.4rem;
   }
 
-  #landing .logo img {
+  .landing .logo img {
     width: 18rem;
   }
 
-  #landing .hero-image {
+  .landing .hero-image {
     grid-area: hero;
     margin: 0;
   }
 
-  #landing nav {
+  .landing nav {
     grid-area: buttons;
     margin: 0;
   }
 
-  #landing .connections {
+  .landing .connections {
     grid-area: total;
     margin: 0;
   }
