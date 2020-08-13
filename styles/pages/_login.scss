@@ -1,0 +1,153 @@
+.login-page {
+  height: 100vh;
+
+  background-color: $color-back-bg;
+
+  > .brand {
+    height: 350px;
+
+    background: $color-purple url("/bg.png") no-repeat 50% 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box {
+      display: flex;
+      flex-direction: column
+    }
+
+    .slogan {
+      // TODO create a _typography.scss file for font stuff
+      color: $color-text-in-purple-base;
+      font: 400 .8rem $font-poppins;
+    }
+  }
+
+  > .login {
+    padding: 3.5rem 2rem 4rem;
+
+    flex: 1;
+
+    > .box > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    > .box > header > .login {
+      margin: 0;
+
+      color: #32264D;
+      font: 600 1.5rem Poppins;
+      line-height: 2.1rem;
+    }
+
+    > .box > header > .sign-up {
+      color: $color-purple;
+      font: 400 .75rem $font-poppins;
+      line-height: 1.5rem;
+      text-decoration: none;
+    }
+
+    > .box > form {
+      margin-top: 1.5rem;
+    }
+
+    .main-fields .form-field {
+      height: 4rem;
+      padding: 0 1.5rem;
+
+      background-color: $color-shapes-2;
+      border: 1px solid $color-back-lines-in-white;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .main-fields .form-field > label {
+      color: $color-text-complement;
+      font: 400 .8rem $font-poppins;
+      line-height: 1.5rem;
+    }
+
+    .main-fields .form-field > input {
+      display: none;
+    }
+
+    .main-fields .form-field > .icon {
+      margin-left: auto;
+    }
+
+    .main-fields .form-field:first-child {
+      border-radius: .5rem .5rem 0 0;
+    }
+
+    .main-fields .form-field:last-child {
+      border-radius: 0 0 .5rem .5rem;
+    }
+
+    .remember-box {
+      margin-top: 1.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .remember-box .form-field.-checkbox {
+      color: $color-text-complement;
+      font: 400 .75rem $font-poppins;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      cursor: pointer;
+    }
+
+    .remember-box .form-field.-checkbox:before {
+      content: "";
+
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $color-shapes-1;
+      border: 1px solid $color-back-lines-in-white;
+      border-radius: .5rem;
+
+      display: block;
+    }
+
+    .remember-box .form-field.-checkbox input {
+      width: 0;
+      height: 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .remember-box .form-field.-checkbox label {
+      margin-left: .75rem;
+    }
+
+    .remember-box .forgot {
+      color: $color-text-complement;
+      font: 400 .75rem $font-poppins;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      height: 3.5rem;
+
+      background-color: $color-shapes-disabled;
+      border: none;
+      border-radius: .5rem;
+
+      color: $color-text-complement;
+      font: 600 1rem $font-archivo;
+    }
+  }
+}
