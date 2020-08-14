@@ -47,7 +47,7 @@ let default = () =>
             </Link>
           </div>
 
-          <button className="button">"Enter" -> string</button>
+          <Button>"Enter" -> string</Button>
         </form>
       </div>
     </section>
