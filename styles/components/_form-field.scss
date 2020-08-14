@@ -1,0 +1,64 @@
+.form-field {
+  display: flex;
+  align-items: center;
+
+  &.-boxed {
+    height: 4rem;
+    padding: 0 1.5rem;
+
+    background-color: $color-shapes-2;
+    border: 1px solid $color-back-lines-in-white;
+    border-radius: .5rem;
+  }
+
+  > label {
+    color: $color-text-complement;
+    font: 400 .8rem $font-poppins;
+    line-height: 1.5rem;
+  }
+
+  > input {
+    display: none;
+  }
+
+  &.-checkbox {
+    color: $color-text-complement;
+    font: 400 .75rem $font-poppins;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    cursor: pointer;
+
+    &:before {
+      content: "";
+
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $color-shapes-1;
+      border: 1px solid $color-back-lines-in-white;
+      border-radius: .5rem;
+
+      display: block;
+    }
+
+    > input {
+      width: 0;
+      height: 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    > label {
+      margin-left: .75rem;
+    }
+  }
+
+  &.-password > .icon {
+    margin-left: auto;
+  }
+}

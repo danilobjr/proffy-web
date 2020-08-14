@@ -1,6 +1,6 @@
 open React;
 open Next;
-open Icon;
+open FormField;
 
 
 [@react.component]
@@ -16,7 +16,7 @@ let default = () =>
     <section className="login">
       <div className="box">
         <header>
-          <h1 className="login">"Login" -> string</h1>
+          <h1 className="title">"Login" -> string</h1>
           <Link href="/">
             <a className="sign-up">"Sign up" -> string</a>
           </Link>
@@ -24,23 +24,21 @@ let default = () =>
 
         <form>
           <div className="main-fields">
-            <div className="form-field">
-              <label htmlFor="email">"E-mail" -> string</label>
-              <input id="email" type_="text" />
-            </div>
+            <InputText
+              name="email"
+              label="E-mail"
+              boxed=true
+            />
 
-            <div className="form-field -password">
-              <label htmlFor="password">"Password" -> string</label>
-              <input id="password" type_="password" />
-              <Icon name=SeePassword />
-            </div>
+            <InputPassword
+              name="password"
+              label="Password"
+              boxed=true
+            />
           </div>
 
           <div className="remember-box">
-            <div className="form-field -checkbox">
-              <input id="remember-me" type_="checkbox" />
-              <label htmlFor="">"Remember me" -> string</label>
-            </div>
+            <Checkbox name="rememberme" label="Remember me" />
 
             <Link href="/">
               <a className="forgot">"Forgot my password" -> string</a>

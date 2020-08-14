@@ -35,10 +35,10 @@
       justify-content: space-between;
     }
 
-    > .box > header > .login {
+    > .box > header > .title {
       margin: 0;
 
-      color: #32264D;
+      color: $color-text-titles;
       font: 600 1.5rem Poppins;
       line-height: 2.1rem;
     }
@@ -52,31 +52,6 @@
 
     > .box > form {
       margin-top: 1.5rem;
-    }
-
-    .main-fields .form-field {
-      height: 4rem;
-      padding: 0 1.5rem;
-
-      background-color: $color-shapes-2;
-      border: 1px solid $color-back-lines-in-white;
-
-      display: flex;
-      align-items: center;
-    }
-
-    .main-fields .form-field > label {
-      color: $color-text-complement;
-      font: 400 .8rem $font-poppins;
-      line-height: 1.5rem;
-    }
-
-    .main-fields .form-field > input {
-      display: none;
-    }
-
-    .main-fields .form-field > .icon {
-      margin-left: auto;
     }
 
     .main-fields .form-field:first-child {
@@ -93,43 +68,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .remember-box .form-field.-checkbox {
-      color: $color-text-complement;
-      font: 400 .75rem $font-poppins;
-
-      display: flex;
-      align-items: center;
-
-      position: relative;
-
-      cursor: pointer;
-    }
-
-    .remember-box .form-field.-checkbox:before {
-      content: "";
-
-      width: 1.5rem;
-      height: 1.5rem;
-      background-color: $color-shapes-1;
-      border: 1px solid $color-back-lines-in-white;
-      border-radius: .5rem;
-
-      display: block;
-    }
-
-    .remember-box .form-field.-checkbox input {
-      width: 0;
-      height: 0;
-
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .remember-box .form-field.-checkbox label {
-      margin-left: .75rem;
     }
 
     .remember-box .forgot {
