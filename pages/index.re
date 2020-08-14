@@ -16,7 +16,9 @@ let default = () =>
       <div className="box">
         <header>
           <Text type_=Title>"Login"</Text>
-          <Link className="sign-up" href="/">"Sign up"</Link>
+          <Link className="sign-up" href="/">
+            "Sign up"
+          </Link>
         </header>
 
         <form>
@@ -37,11 +39,7 @@ let default = () =>
           <div className="remember-box">
             <Checkbox name="rememberme" label="Remember me" />
 
-            <Link
-              className="forgot"
-              href="/"
-              unsaturatedColor=true
-            >
+            <Link className="forgot" href="/">
               "Forgot my password"
             </Link>
           </div>

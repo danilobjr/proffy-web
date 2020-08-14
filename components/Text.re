@@ -5,7 +5,6 @@ type type_ =
   | Button
   | Label
   | Link
-  | LinkUnsaturated
   | Slogan
   | Title;
 
@@ -15,7 +14,6 @@ let make = (~className="", ~type_, ~children) => {
   | Button => "-button"
   | Label => "-label"
   | Link => "-link"
-  | LinkUnsaturated => "-link -unsaturated"
   | Slogan => "-slogan"
   | Title => "-title"
   };
