@@ -1,5 +1,4 @@
 open React;
-open Next;
 open FormField;
 
 
@@ -17,8 +16,9 @@ let default = () =>
       <div className="box">
         <header>
           <h1 className="title">"Login" -> string</h1>
-          <Link href="/">
-            <a className="sign-up">"Sign up" -> string</a>
+
+          <Link className="sign-up" href="/">
+            "Sign up" -> string
           </Link>
         </header>
 
@@ -40,8 +40,8 @@ let default = () =>
           <div className="remember-box">
             <Checkbox name="rememberme" label="Remember me" />
 
-            <Link href="/">
-              <a className="forgot">"Forgot my password" -> string</a>
+            <Link className="forgot" href="/">
+              "Forgot my password" -> string
             </Link>
           </div>
 
