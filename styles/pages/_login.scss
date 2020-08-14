@@ -12,12 +12,6 @@
       display: flex;
       flex-direction: column
     }
-
-    .slogan {
-      // TODO create a _typography.scss file for font stuff
-      color: $color-text-in-purple-base;
-      font: 400 .8rem $font-poppins;
-    }
   }
 
   > .login {
@@ -31,19 +25,8 @@
       justify-content: space-between;
     }
 
-    > .box > header > .title {
+    > .box > header > .-title {
       margin: 0;
-
-      color: $color-text-titles;
-      font: 600 1.5rem Poppins;
-      line-height: 2.1rem;
-    }
-
-    > .box > header > .sign-up {
-      color: $color-purple;
-      font: 400 .75rem $font-poppins;
-      line-height: 1.5rem;
-      text-decoration: none;
     }
 
     > .box > form {
@@ -72,7 +55,7 @@
       text-decoration: none;
     }
 
-    .button {
+    .button-box {
       margin-top: 1.5rem;
     }
   }

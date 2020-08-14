@@ -1,0 +1,34 @@
+.typography-text {
+  &.-button {
+    color: $color-text-complement;
+    font: 600 1rem $font-archivo;
+  }
+
+  &.-label {
+    color: $color-text-complement;
+    font: 400 .8rem $font-poppins;
+    line-height: 1.5rem;
+  }
+
+  &.-link {
+    color: $color-purple;
+    font: 400 .75rem $font-poppins;
+    line-height: 1.5rem;
+    text-decoration: none;
+
+    &.-unsaturated {
+      color: $color-text-complement;
+    }
+  }
+
+  &.-slogan {
+    color: $color-text-in-purple-base;
+    font: 400 .8rem $font-poppins;
+  }
+
+  &.-title {
+    color: $color-text-titles;
+    font: 600 1.5rem Poppins;
+    line-height: 2.1rem;
+  }
+}

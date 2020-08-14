@@ -1,5 +1,5 @@
-open React;
 open FormField;
+open Text;
 
 
 [@react.component]
@@ -8,18 +8,15 @@ let default = () =>
     <section className="brand">
       <div className="box">
         <ProffyLogo />
-        <span className="slogan">"Lessons platform" -> string</span>
+        <Text type_=Slogan>"Lessons platform"</Text>
       </div>
     </section>
 
     <section className="login">
       <div className="box">
         <header>
-          <h1 className="title">"Login" -> string</h1>
-
-          <Link className="sign-up" href="/">
-            "Sign up" -> string
-          </Link>
+          <Text type_=Title>"Login"</Text>
+          <Link className="sign-up" href="/">"Sign up"</Link>
         </header>
 
         <form>
@@ -40,12 +37,16 @@ let default = () =>
           <div className="remember-box">
             <Checkbox name="rememberme" label="Remember me" />
 
-            <Link className="forgot" href="/">
-              "Forgot my password" -> string
+            <Link
+              className="forgot"
+              href="/"
+              unsaturatedColor=true
+            >
+              "Forgot my password"
             </Link>
           </div>
 
-          <Button>"Enter" -> string</Button>
+          <Button>"Enter"</Button>
         </form>
       </div>
     </section>

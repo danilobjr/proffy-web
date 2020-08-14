@@ -1,10 +1,19 @@
 open Classnames;
+open Text;
 
 [@react.component]
-let make = (~className="", ~href, ~children) => {
-  let classes = append(["link", className]);
+let make = (~className="", ~href, ~unsaturatedColor=false, ~children) => {
+  let classes = append(["link-text", className]);
+
+  let type_ =
+    switch unsaturatedColor {
+    | true => LinkUnsaturated
+    | false => Link
+    };
 
   <Next.Link href>
-    <a className=classes>children</a>
+    <a className=classes>
+      <Text type_>children</Text>
+    </a>
   </Next.Link>;
 };

@@ -1,11 +1,8 @@
-.button {
+.button-box {
   width: 100%;
   height: 3.5rem;
 
   background-color: $color-shapes-disabled;
   border: none;
   border-radius: .5rem;
-
-  color: $color-text-complement;
-  font: 600 1rem $font-archivo;
 }
