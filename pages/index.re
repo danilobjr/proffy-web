@@ -4,7 +4,7 @@ open FormField;
 
 [@react.component]
 let default = () =>
-  <div className="login-page">
+  <Page className="login-page">
     <section className="brand">
       <div className="box">
         <ProffyLogo />
@@ -49,4 +49,4 @@ let default = () =>
         </form>
       </div>
     </section>
-  </div>;
+  </Page>;
