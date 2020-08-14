@@ -1,8 +1,9 @@
 let rec append = classnames =>
   switch classnames {
   | [s, ...rest] => {
-      let names = append(rest);
-      s ++ " " ++ names;
+    append(rest)
+    -> (++) (s ++ " ", _)
+    -> String.trim;
     }
   | [] => ""
 };
