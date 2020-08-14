@@ -2,7 +2,7 @@ open Classnames;
 
 [@react.component]
 let make = (~className="", ~children) => {
-  let classes = append(["page", className]);
+  let classes = append(["page-box", className]);
 
-  <div className=classes>children</div>
+  <div className=classes>children</div>;
 };
