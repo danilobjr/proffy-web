@@ -1,8 +1,26 @@
+open Classnames;
 open Text;
 
+type buttonType =
+  | Default
+  | Disabled
+  | Primary;
+
 [@react.component]
-let make = (~children) => {
-  <button className="button-box">
+let make = (~type_, ~children) => {
+  let typeClass =
+    switch type_ {
+    | Default => "-default"
+    | Disabled => "-disabled"
+    | Primary => "-primary"
+    };
+
+  let classNames = append([
+    "button-box",
+    typeClass
+  ]);
+
+  <button className=classNames>
     <Text type_=Button>children</Text>
   </button>;
 };
