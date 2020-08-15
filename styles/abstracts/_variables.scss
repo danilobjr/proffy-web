@@ -1,4 +1,4 @@
-// COLORS
+// colors
 $color-purple-another: #9871F5;
 $color-purple: #8257E5;
 $color-purple-little: #774DD6;
@@ -26,6 +26,10 @@ $color-text-in-purple-title: #FFFFFF;
 $color-text-in-purple-base: #D4C2FF;
 $color-text-in-purple-complement: #A380F6;
 
-// FONTS
+// fonts
 $font-poppins: Poppins;
 $font-archivo: Archivo;
+
+// animations
+$bezier-curve: cubic-bezier(0.0, 0, 0.2, 1);
+$input-transition-duration: .2s;

@@ -6,8 +6,14 @@
 
   &.-label {
     color: $color-text-complement;
-    font: 400 .8rem $font-poppins;
+    font: 400 .875rem $font-poppins;
     line-height: 1.5rem;
+
+    // &.-focused {
+    //   font-size: .625rem;
+    //   line-height: 1.25rem;
+    //   color: $color-text-inputs;
+    // }
   }
 
   &.-link {
@@ -26,5 +32,11 @@
     color: $color-text-titles;
     font: 600 1.5rem Poppins;
     line-height: 2.1rem;
+  }
+}
+
+.button-box {
+  &.-primary > .typography-text.-button {
+    color: $color-shapes-1;
   }
 }

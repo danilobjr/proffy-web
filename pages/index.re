@@ -1,9 +1,33 @@
+open Button;
 open FormField;
 open Text;
 
+type formData = {
+  email: string,
+  password: string,
+  rememberme: bool,
+};
+
+// TODO extract form to its own component with spellCheck=false
 
 [@react.component]
-let default = () =>
+let default = () => {
+  let (formData, setFormData) = React.useState(_ => {
+    email: "danilo@email.com.br",
+    password: "12345678",
+    rememberme: false,
+  });
+
+  let handleChange = (update, e) => {
+    let target = ReactEvent.Form.target(e);
+    let currentValue = target##value;
+    setFormData(state => update(state, currentValue));
+  };
+
+  let handleCheckboxChange = (update, newValue) => {
+    setFormData(state => update(state, newValue))
+  };
+
   <Page className="login-page">
     <section className="brand">
       <div className="box">
@@ -21,31 +45,41 @@ let default = () =>
           </Link>
         </header>
 
-        <form>
+        <form spellCheck=false>
           <div className="main-fields">
             <InputText
-              name="email"
               label="E-mail"
+              name="email"
               boxed=true
+              value=formData.email
+              onChange=handleChange((state, value) => { ...state, email: value })
             />
 
             <InputPassword
-              name="password"
               label="Password"
+              name="password"
               boxed=true
+              value=formData.password
+              onChange=handleChange((state, value) => { ...state, password: value })
             />
           </div>
 
           <div className="remember-box">
-            <Checkbox name="rememberme" label="Remember me" />
+            <Checkbox
+              label="Remember me"
+              name="rememberme"
+              checked=formData.rememberme
+              onChange=handleCheckboxChange((state, value) => { ...state, rememberme: value })
+            />
 
             <Link className="forgot" href="/">
               "Forgot my password"
             </Link>
           </div>
 
-          <Button>"Enter"</Button>
+          <Button type_=Primary>"Enter"</Button>
         </form>
       </div>
     </section>
   </Page>;
+}
