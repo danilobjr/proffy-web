@@ -6,10 +6,10 @@ type t =
   | SeePassword;
 
 [@react.component]
-let make = (~name) => {
+let make = (~name, ~onClick={_ => ()}) => {
   switch name {
   | Back =>
-    <svg className="icon -back" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="icon -back" onClick width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.999999 6H17" stroke="#9C98A6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M6.00098 11.001L0.999976 6.00002L6.00098 0.999023" stroke="#9C98A6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>

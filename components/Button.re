@@ -7,7 +7,7 @@ type buttonType =
   | Primary;
 
 [@react.component]
-let make = (~type_=Default, ~children) => {
+let make = (~type_=Default, ~onClick={_ => ()}, ~children) => {
   let typeClass =
     switch type_ {
     | Default => ""
@@ -20,7 +20,7 @@ let make = (~type_=Default, ~children) => {
     typeClass
   ]);
 
-  <button className=classNames>
+  <button className=classNames onClick>
     <Text type_=Button>children</Text>
   </button>;
 };
