@@ -7,10 +7,10 @@ type buttonType =
   | Primary;
 
 [@react.component]
-let make = (~type_, ~children) => {
+let make = (~type_=Default, ~children) => {
   let typeClass =
     switch type_ {
-    | Default => "-default"
+    | Default => ""
     | Disabled => "-disabled"
     | Primary => "-primary"
     };

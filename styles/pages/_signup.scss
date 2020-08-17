@@ -1,0 +1,35 @@
+.page-container.signup {
+  > .page-content {
+    justify-content: space-between;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+
+    .-text {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .form-field {
+    &.-boxed:first-of-type input {
+      border-bottom-left-radius: 0 0;
+      border-bottom-right-radius: 0 0;
+    }
+
+    &.-boxed:last-of-type input {
+      border-top: 0;
+      border-top-left-radius: 0 0;
+      border-top-right-radius: 0 0;
+    }
+  }
+
+  .fields {
+    margin-top: 1.5rem;
+  }
+
+  .button-box {
+    margin-top: 1.5rem;
+  }
+}

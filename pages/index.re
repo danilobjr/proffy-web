@@ -36,8 +36,7 @@ let default = () => {
       </div>
     </section>
 
-    <section className="login">
-      <div className="box">
+    <PageContent>
         <header>
           <Text type_=Title>"Login"</Text>
           <Link className="sign-up" href="/">
@@ -79,7 +78,6 @@ let default = () => {
 
           <Button type_=Primary>"Enter"</Button>
         </form>
-      </div>
-    </section>
+    </PageContent>
   </Page>;
 }

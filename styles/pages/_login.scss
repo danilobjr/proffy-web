@@ -7,29 +7,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .box {
-      display: flex;
-      flex-direction: column
-    }
   }
 
-  > .login {
+  > .page-content {
     padding: 3.5rem 2rem 4rem;
 
     flex: 1;
 
-    > .box > header {
+    > header {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    > .box > header > .-title {
+    > header > .-title {
       margin: 0;
     }
 
-    > .box > form {
+    > form {
       margin-top: 1.5rem;
     }
 

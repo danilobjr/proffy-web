@@ -2,7 +2,7 @@
 
 .typography {
   &.-button {
-    color: $color-text-complement;
+    color: $color-shapes-1;
     font: $font-button;
   }
 
@@ -19,9 +19,16 @@
     text-decoration: none;
   }
 
+  // TODO include .-text
   &.-slogan {
     color: $color-text-in-purple-base;
-    font: $font-slogan;
+    font: $font-text;
+  }
+
+  &.-text {
+    color: $color-text-base;
+    font: 400 .875rem $font-poppins;
+    line-height: 1.5rem;
   }
 
   &.-title {
@@ -29,11 +36,21 @@
     font: $font-title;
     line-height: 2.1rem;
   }
+
+  &.-title-bigger {
+    color: $color-text-titles;
+    font: $font-title-bigger;
+    line-height: 2.625rem;
+  }
 }
 
 // components
 
 .button-box {
+  &.-disabled > .typography.-button {
+    color: $color-text-complement;
+  }
+
   &.-primary > .typography.-button {
     color: $color-shapes-1;
   }

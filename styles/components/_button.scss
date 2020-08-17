@@ -5,6 +5,8 @@
   border: none;
   border-radius: .5rem;
 
+  background-color: $color-purple;
+
   &.-disabled {
     background-color: $color-shapes-disabled;
   }

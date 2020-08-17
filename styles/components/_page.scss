@@ -1,5 +1,8 @@
-.page-box {
+.page-container {
   height: 100vh;
 
   background-color: $color-back-bg;
+
+  display: flex;
+  flex-direction: column;
 }
