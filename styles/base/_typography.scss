@@ -1,0 +1,61 @@
+// Text component
+
+.typography {
+  &.-button {
+    color: $color-text-complement;
+    font: $font-button;
+  }
+
+  &.-label {
+    color: $color-text-complement;
+    font: $font-label;
+    line-height: 1.5rem;
+  }
+
+  &.-link {
+    color: $color-purple;
+    font: $font-link;
+    line-height: 1.5rem;
+    text-decoration: none;
+  }
+
+  &.-slogan {
+    color: $color-text-in-purple-base;
+    font: $font-slogan;
+  }
+
+  &.-title {
+    color: $color-text-titles;
+    font: $font-title;
+    line-height: 2.1rem;
+  }
+}
+
+// components
+
+.button-box {
+  &.-primary > .typography.-button {
+    color: $color-shapes-1;
+  }
+}
+
+.form-field {
+  &.-boxed > input {
+    color: $color-text-base;
+    font: $font-input;
+  }
+
+  &.-interactive .typography.-label {
+    color: $color-text-inputs;
+  }
+
+  &.-checkbox .typography.-label {
+    font-size: .75rem;
+  }
+}
+
+// helpers
+
+._no-text-decoration {
+  text-decoration: none;
+}

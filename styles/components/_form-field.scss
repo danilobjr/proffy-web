@@ -14,7 +14,6 @@
       left: 0;
       top: 0;
 
-      // TODO put these padding and position value (input and label) in variables.scss
       transform: translate(1.5rem, calc(2rem - 50%)) scale(1);
       transform-origin: left top;
     }
@@ -29,9 +28,6 @@
       background-color: $color-shapes-2;
       border: 1px solid $color-back-lines-in-white;
       border-radius: .5rem;
-
-      color: #6a6180;
-      font: 400 14px Poppins;
     }
 
     &:before {
@@ -46,31 +42,25 @@
       position: absolute;
       left: 0;
       top: 0;
-      // top: calc(50% - 20px);
 
       transform-origin: right center;
       transform: translate(-1px, calc(2rem - 50%)) scaleX(0);
 
-      transition: transform $input-transition-duration $bezier-curve 0ms;
+      transition: transform $transition-input-duration $bezier-curve 0ms;
     }
 
     > label.-animated {
       transition:
-        // TODO rename this to transition-input-duration
-        // TODO use this as a function like: input-transition(color);
-        color $input-transition-duration $bezier-curve 0ms,
-        transform $input-transition-duration $bezier-curve 0ms;
+        color $transition-input-duration $bezier-curve 0ms,
+        transform $transition-input-duration $bezier-curve 0ms;
     }
 
     &.-interactive > label {
       transform: translate(1.5rem, .8rem) scale(.75);
     }
 
-    &.-interactive .typography-text.-label {
-      // TODO recreate typography.scss and move this there
-      color: $color-text-inputs;
-
-      transition: $input-transition-duration;
+    &.-interactive .typography.-label {
+      transition: $transition-input-duration;
     }
 
     &.-focused:before {
@@ -81,9 +71,6 @@
   }
 
   &.-checkbox {
-    color: $color-text-complement;
-    font: 400 .75rem $font-poppins;
-
     display: flex;
     flex-direction: row;
     align-items: center;

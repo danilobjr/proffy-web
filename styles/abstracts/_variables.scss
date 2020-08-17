@@ -27,9 +27,18 @@ $color-text-in-purple-base: #D4C2FF;
 $color-text-in-purple-complement: #A380F6;
 
 // fonts
+
 $font-poppins: Poppins;
 $font-archivo: Archivo;
 
+$font-button: 600 1rem $font-archivo;
+$font-input:  400 .875rem $font-poppins;
+$font-label:  400 .875rem $font-poppins;
+$font-link:   400 .75rem $font-poppins;
+$font-slogan: 400 .875rem $font-poppins;
+$font-title:  600 1.5rem $font-poppins;
+
 // animations
+
 $bezier-curve: cubic-bezier(0.0, 0, 0.2, 1);
-$input-transition-duration: .2s;
+$transition-input-duration: .2s;

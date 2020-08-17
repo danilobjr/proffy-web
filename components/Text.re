@@ -18,7 +18,7 @@ let make = (~className="", ~type_, ~children) => {
   | Title => "-title"
   };
 
-  let classes = append(["typography-text", typeClass, className]);
+  let classes = append(["typography", typeClass, className]);
 
   <span className=classes>children -> string</span>;
 };
