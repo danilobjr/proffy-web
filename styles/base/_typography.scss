@@ -21,7 +21,7 @@
 
   // TODO include .-text
   &.-slogan {
-    color: $color-text-in-purple-base;
+    color: $color-text-on-purple-base;
     font: $font-text;
   }
 
@@ -29,6 +29,10 @@
     color: $color-text-base;
     font: 400 .875rem $font-poppins;
     line-height: 1.5rem;
+
+    &.-on-purple {
+      color: $color-text-on-purple-base;
+    }
   }
 
   &.-title {
@@ -41,6 +45,10 @@
     color: $color-text-titles;
     font: $font-title-bigger;
     line-height: 2.625rem;
+
+    &.-on-purple {
+      color: $color-text-on-purple-title;
+    }
   }
 }
 

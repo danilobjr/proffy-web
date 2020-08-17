@@ -32,14 +32,14 @@ let default = () => {
     <section className="brand">
       <div className="box">
         <ProffyLogo />
-        <Text type_=Slogan>"Lessons platform"</Text>
+        <Text type_=Text onPurpleBg=true>"Lessons platform"</Text>
       </div>
     </section>
 
     <PageContent>
         <header>
           <Text type_=Title>"Login"</Text>
-          <Link className="sign-up" href="/">
+          <Link className="sign-up" href="/signup">
             "Sign up"
           </Link>
         </header>

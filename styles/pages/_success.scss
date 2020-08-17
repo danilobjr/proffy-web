@@ -1,0 +1,29 @@
+.page-container.success {
+  background-color: $color-purple;
+
+  > .page-content {
+    > .box {
+      background: url('/success-bg.svg') no-repeat center center;
+
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    > .box > .typography.-title-bigger {
+      margin-top: 1.5rem;
+
+      text-align: center;
+    }
+
+    > .box > .typography.-text {
+      margin-top: 1rem;
+    }
+
+    > .button-box {
+      margin-top: 3.5rem;
+    }
+  }
+}

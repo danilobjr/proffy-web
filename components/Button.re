@@ -6,8 +6,9 @@ type buttonType =
   | Disabled
   | Primary;
 
+// TODO use ~type_ as used in LinkButton .. see if this apply to other components like Text and FormField
 [@react.component]
-let make = (~type_=Default, ~onClick={_ => ()}, ~children) => {
+let make = (~className="", ~type_=Default, ~onClick={_ => ()}, ~children) => {
   let typeClass =
     switch type_ {
     | Default => ""
@@ -17,7 +18,8 @@ let make = (~type_=Default, ~onClick={_ => ()}, ~children) => {
 
   let classNames = append([
     "button-box",
-    typeClass
+    typeClass,
+    className,
   ]);
 
   <button className=classNames onClick>
