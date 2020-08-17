@@ -1,14 +1,10 @@
-open Icon;
 open FormField;
 open Text;
 
 [@react.component]
 let default = () => {
   <Page className="signup">
-    <div className="app-bar">
-      <Icon name=Back />
-      <PageIndicator />
-    </div>
+    <AppBar />
 
     <PageContent>
       <header>
