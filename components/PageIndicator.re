@@ -1,5 +1,3 @@
-open Icon;
-
 [@react.component]
 let make = (~amount=1, ~currentIndex=0) => {
   let indicators = amount

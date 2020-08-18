@@ -1,5 +1,4 @@
 open Classnames;
-open Icon;
 
 type refType = React.ref(Js.nullable(Dom.htmlInputElement));
 

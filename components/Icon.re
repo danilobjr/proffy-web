@@ -1,12 +1,13 @@
-type t =
+type iconName =
   | Back
   | Check
+  | Heart
   | PageIndicator
   | PageIndicatorHighlight
   | SeePassword;
 
 [@react.component]
-let make = (~name, ~onClick={_ => ()}) => {
+let make = (~name: iconName, ~onClick={_ => ()}) => {
   switch name {
   | Back =>
     <svg className="icon -back" onClick width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,6 +17,10 @@ let make = (~name, ~onClick={_ => ()}) => {
   | Check =>
     <svg className="icon -check" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M9 1L4.00022 6L1 2.99965" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  | Heart =>
+    <svg className="icon -heart" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.6995 1C16.8695 1 18.9995 3.98 18.9995 6.76C18.9995 12.39 10.1596 17 9.99956 17C9.83956 17 0.999634 12.39 0.999634 6.76C0.999634 3.98 3.12962 1 6.29959 1C8.11957 1 9.30956 1.91 9.99956 2.71C10.6896 1.91 11.8795 1 13.6995 1Z" fill="#8257E5" stroke="#8257E5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   | PageIndicator =>
     <svg className="icon -page-indicator" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
