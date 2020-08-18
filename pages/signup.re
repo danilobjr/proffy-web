@@ -5,12 +5,23 @@ open Text;
 [@react.component]
 let default = () => {
   let (viewIndex, setViewIndex) = React.useState(_ => 0);
+  let router = Next.useRouter();
 
-  let handleBackButtonClick = _ => setViewIndex(_ => 0);
+  let handleBackButtonClick = _ => {
+    switch (viewIndex === 0) {
+    | true => router -> Next.Router.push(~url="/", ())
+    | false => setViewIndex(_ => 0)
+    };
+  };
 
   let handleNextButtonClick = e => {
     e -> ReactEvent.Mouse.preventDefault;
     setViewIndex(_ => 1);
+  };
+
+  let handleCreateButtonClick = e => {
+    e -> ReactEvent.Mouse.preventDefault;
+    router -> Next.Router.push(~url="/success", ());
   };
 
   <Page className="signup">
@@ -71,7 +82,7 @@ let default = () => {
               />
             </div>
 
-            <Button type_=Primary>"Create account"</Button>
+            <Button type_=Primary onClick=handleCreateButtonClick>"Create account"</Button>
           </PageContent>
         </Slider.View>
       </Slider>
