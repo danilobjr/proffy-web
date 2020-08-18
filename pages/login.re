@@ -1,6 +1,4 @@
-open Button;
 open FormField;
-open Text;
 
 type formData = {
   email: string,
@@ -29,12 +27,7 @@ let default = () => {
   };
 
   <Page className="login-page">
-    <section className="brand">
-      <div className="box">
-        <ProffyLogo />
-        <Text type_=Text onPurpleBg=true>"Lessons platform"</Text>
-      </div>
-    </section>
+    <Hero />
 
     <PageContent>
         <header>
@@ -71,7 +64,7 @@ let default = () => {
               onChange=handleCheckboxChange((state, value) => { ...state, rememberme: value })
             />
 
-            <Link className="forgot" href="/">
+            <Link className="forgot" href="/reset">
               "Forgot my password"
             </Link>
           </div>

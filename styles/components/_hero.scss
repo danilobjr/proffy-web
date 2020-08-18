@@ -1,0 +1,14 @@
+.hero-container {
+  height: 350px;
+
+  background: $color-purple url("/bg.png") no-repeat 50% 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .box {
+    display: flex;
+    flex-direction: column;
+  }
+}
