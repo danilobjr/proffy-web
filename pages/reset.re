@@ -15,7 +15,7 @@ let default = () => {
   };
 
   <Page className="reset-page">
-    <Hero />
+    <Hero.Brand />
 
     <AppBar onBackClick=handleBackClick />
 

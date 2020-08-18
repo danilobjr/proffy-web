@@ -4,7 +4,7 @@ module GenericSuccess = {
   [@react.component]
   let make = () =>
     <>
-      <Text type_=TitleBigger onPurpleBg=true>"Sweet!"</Text>
+      <Text type_=TitleBigger purpleBg=true>"Sweet!"</Text>
     </>;
 };
 
@@ -12,8 +12,8 @@ module SignupSuccess = {
   [@react.component]
   let make = () =>
     <>
-      <Text type_=TitleBigger onPurpleBg=true>"Application complete!"</Text>
-      <Text type_=Text onPurpleBg=true>"Now you are part of Proffy family"</Text>
+      <Text type_=TitleBigger purpleBg=true>"Application complete!"</Text>
+      <Text type_=Text purpleBg=true>"Now you are part of Proffy family"</Text>
     </>;
 };
 
@@ -21,8 +21,8 @@ module ResetPasswordSuccess = {
   [@react.component]
   let make = () =>
     <>
-      <Text type_=TitleBigger onPurpleBg=true>"E-mail sent!"</Text>
-      <Text type_=Text onPurpleBg=true>"Check your e-mail and follow instructions to reset your password"</Text>
+      <Text type_=TitleBigger purpleBg=true>"E-mail sent!"</Text>
+      <Text type_=Text purpleBg=true>"Check your e-mail and follow instructions to reset your password"</Text>
     </>;
 };
 

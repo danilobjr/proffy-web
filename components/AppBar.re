@@ -1,6 +1,13 @@
 [@react.component]
-let make = (~onBackClick={_ => ()}, ~children=React.null) =>
+let make = (~noBackButton=false, ~onBackClick={_ => ()}, ~children=React.null) => {
+  let backButton =
+    switch noBackButton {
+    | true => React.null
+    | false => <Icon name=Back onClick=onBackClick />
+    };
+
   <div className="app-bar">
-    <Icon name=Back onClick=onBackClick />
+    backButton
     children
   </div>;
+};

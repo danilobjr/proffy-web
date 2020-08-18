@@ -27,7 +27,7 @@ let default = () => {
   };
 
   <Page className="login-page">
-    <Hero />
+    <Hero.Brand />
 
     <PageContent>
         <header>

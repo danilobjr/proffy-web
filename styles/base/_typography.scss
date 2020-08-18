@@ -27,8 +27,12 @@
 
   &.-text {
     color: $color-text-base;
-    font: 400 .875rem $font-poppins;
+    font: $font-text;
     line-height: 1.5rem;
+
+    &.-bigger {
+      font: $font-text-bigger;
+    }
 
     &.-on-purple {
       color: $color-text-on-purple-base;
@@ -39,12 +43,11 @@
     color: $color-text-titles;
     font: $font-title;
     line-height: 2.1rem;
-  }
 
-  &.-title-bigger {
-    color: $color-text-titles;
-    font: $font-title-bigger;
-    line-height: 2.625rem;
+    &.-bigger {
+      font: $font-title-bigger;
+      line-height: 2.625rem;
+    }
 
     &.-on-purple {
       color: $color-text-on-purple-title;
@@ -80,6 +83,10 @@
 }
 
 // helpers
+
+._bold {
+  font-weight: 600 !important;
+}
 
 ._no-text-decoration {
   text-decoration: none;
