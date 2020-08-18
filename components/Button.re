@@ -1,5 +1,4 @@
 open Classnames;
-open Text;
 
 type buttonType =
   | Default
@@ -8,7 +7,7 @@ type buttonType =
 
 // TODO use ~type_ as used in LinkButton .. see if this apply to other components like Text and FormField
 [@react.component]
-let make = (~className="", ~type_=Default, ~onClick={_ => ()}, ~children) => {
+let make = (~className="", ~type_: buttonType=Default, ~onClick={_ => ()}, ~children) => {
   let typeClass =
     switch type_ {
     | Default => ""

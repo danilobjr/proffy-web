@@ -1,6 +1,4 @@
-open Button;
 open Image;
-open Text;
 
 [@react.component]
 let default = () => {

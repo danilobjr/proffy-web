@@ -1,7 +1,7 @@
 open React;
 open Classnames;
 
-type type_ =
+type textType =
   | Button
   | Label
   | Link
@@ -11,7 +11,7 @@ type type_ =
   | TitleBigger;
 
 [@react.component]
-let make = (~className="", ~onPurpleBg=false, ~type_=Text, ~children) => {
+let make = (~className="", ~onPurpleBg=false, ~type_: textType=Text, ~children) => {
   let typeClass =
     switch type_ {
     | Button => "-button"

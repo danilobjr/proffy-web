@@ -1,5 +1,4 @@
 open Classnames;
-open Text;
 
 [@react.component]
 let make = (~className="", ~href, ~children) => {

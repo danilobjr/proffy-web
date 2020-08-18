@@ -1,6 +1,4 @@
-open Button;
 open FormField;
-open Text;
 
 [@react.component]
 let default = () => {
