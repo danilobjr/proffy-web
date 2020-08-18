@@ -10,6 +10,7 @@ type formData = {
 
 [@react.component]
 let default = () => {
+  let router = Next.useRouter();
   let (formData, setFormData) = React.useState(_ => {
     email: "danilo@email.com.br",
     password: "12345678",
@@ -26,6 +27,11 @@ let default = () => {
     setFormData(state => update(state, newValue))
   };
 
+  let handleFormSubmit = e => {
+    e -> ReactEvent.Form.preventDefault;
+    router -> Next.Router.push(~url="/", ());
+  };
+
   <Page className="login-page">
     <Hero.Brand />
 
@@ -37,7 +43,7 @@ let default = () => {
           </Link>
         </header>
 
-        <form spellCheck=false>
+        <form spellCheck=false onSubmit=handleFormSubmit>
           <div className="main-fields">
             <InputText
               label="E-mail"

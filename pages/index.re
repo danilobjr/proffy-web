@@ -1,12 +1,19 @@
 // TODO move this to home.re file and do a redirect
 [@react.component]
 let default = () => {
+  let router = Next.useRouter();
+
+  let handleLogoutClick = e => {
+    e -> ReactEvent.Mouse.preventDefault;
+    router -> Next.Router.push(~url="/login", ());
+  };
+
   <Page className="home-page">
     <Hero>
       <AppBar noBackButton=true>
         <img className="userimage" src="https://github.com/danilobjr.png" alt="user profile image" />
         <Text>"Danilo Barros"</Text>
-        <Button icon=Power />
+        <Button icon=Power onClick=handleLogoutClick />
       </AppBar>
 
       <div className="box">

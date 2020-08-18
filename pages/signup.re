@@ -7,7 +7,7 @@ let default = () => {
 
   let handleBackButtonClick = _ => {
     switch (viewIndex === 0) {
-    | true => router -> Next.Router.push(~url="/", ())
+    | true => router -> Next.Router.push(~url="/login", ())
     | false => setViewIndex(_ => 0)
     };
   };

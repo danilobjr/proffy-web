@@ -32,7 +32,7 @@ let default = () => {
 
   let backToLogin = e => {
     e -> ReactEvent.Mouse.preventDefault;
-    router -> Next.Router.push(~url="/", ());
+    router -> Next.Router.push(~url="/login", ());
   };
 
   let fromPage = router.query
@@ -51,6 +51,7 @@ let default = () => {
         <Image name=Success />
         content
       </div>
+
       <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
     </PageContent>
   </Page>
