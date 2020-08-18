@@ -19,7 +19,7 @@ let default = () => {
 
   let handleCreateButtonClick = e => {
     e -> ReactEvent.Mouse.preventDefault;
-    router -> Next.Router.push(~url="/success", ());
+    router -> Next.Router.push(~url="/success?from=signup", ());
   };
 
   <Page className="signup">
