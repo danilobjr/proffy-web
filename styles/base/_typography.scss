@@ -1,0 +1,93 @@
+// Text component
+
+.typography {
+  &.-button {
+    color: $color-shapes-1;
+    font: $font-button;
+  }
+
+  &.-label {
+    color: $color-text-complement;
+    font: $font-label;
+    line-height: 1.5rem;
+  }
+
+  &.-link {
+    color: $color-purple;
+    font: $font-link;
+    line-height: 1.5rem;
+    text-decoration: none;
+  }
+
+  // TODO include .-text
+  &.-slogan {
+    color: $color-text-on-purple-base;
+    font: $font-text;
+  }
+
+  &.-text {
+    color: $color-text-base;
+    font: $font-text;
+    line-height: 1.5rem;
+
+    &.-bigger {
+      font: $font-text-bigger;
+    }
+
+    &.-on-purple {
+      color: $color-text-on-purple-base;
+    }
+  }
+
+  &.-title {
+    color: $color-text-titles;
+    font: $font-title;
+    line-height: 2.1rem;
+
+    &.-bigger {
+      font: $font-title-bigger;
+      line-height: 2.625rem;
+    }
+
+    &.-on-purple {
+      color: $color-text-on-purple-title;
+    }
+  }
+}
+
+// components
+
+.button-box {
+  &.-disabled > .typography.-button {
+    color: $color-text-complement;
+  }
+
+  &.-primary > .typography.-button {
+    color: $color-shapes-1;
+  }
+}
+
+.form-field {
+  &.-boxed > input {
+    color: $color-text-base;
+    font: $font-input;
+  }
+
+  &.-interactive .typography.-label {
+    color: $color-text-inputs;
+  }
+
+  &.-checkbox .typography.-label {
+    font-size: .75rem;
+  }
+}
+
+// helpers
+
+._bold {
+  font-weight: 600 !important;
+}
+
+._no-text-decoration {
+  text-decoration: none;
+}

@@ -1,0 +1,46 @@
+// colors
+$color-purple-another: #9871F5;
+$color-purple: #8257E5;
+$color-purple-little: #774DD6;
+$color-purple-dark: #6842C2;
+
+$color-green: #04D361;
+$color-green-another: #24EF7F;
+
+$color-red: #E33D3D;
+
+$color-back-lines-on-white: #E6E6F0;
+$color-back-hover: #EBEBF5;
+$color-back-bg: #F0F0F7;
+
+$color-shapes-1: #FFFFFF;
+$color-shapes-2: #FAFAFC;
+$color-shapes-disabled: #DCDCE5;
+
+$color-text-titles: #32264D;
+$color-text-base: #6A6180;
+$color-text-complement: #9C98A6;
+$color-text-inputs: #C1BCCC;
+
+$color-text-on-purple-title: #FFFFFF;
+$color-text-on-purple-base: #D4C2FF;
+$color-text-on-purple-complement: #A380F6;
+
+// fonts
+
+$font-poppins: Poppins;
+$font-archivo: Archivo;
+
+$font-button:            600 1rem $font-archivo;
+$font-input:             400 .875rem $font-poppins;
+$font-label:             400 .875rem $font-poppins;
+$font-link:              400 .75rem $font-poppins;
+$font-text:              400 .875rem $font-poppins;
+$font-text-bigger:       400 1.25rem $font-poppins;
+$font-title:             600 1.5rem $font-poppins;
+$font-title-bigger:      600 2rem $font-poppins;
+
+// animations
+
+$bezier-curve: cubic-bezier(0.0, 0, 0.2, 1);
+$transition-input-duration: .2s;

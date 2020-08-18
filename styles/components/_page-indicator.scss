@@ -1,0 +1,8 @@
+.page-indicator {
+  display: flex;
+  align-items: center;
+
+  [class^=icon]:not(:first-of-type) {
+    margin-left: .5rem;
+  }
+}

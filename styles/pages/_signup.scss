@@ -1,0 +1,44 @@
+.page-container.signup {
+  .page-content {
+    > form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .slider-container {
+    margin-top: auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+
+    .-text {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .page-content > .-title {
+    margin-top: auto;
+  }
+
+  .form-field {
+    &.-boxed:first-of-type input {
+      border-bottom-left-radius: 0 0;
+      border-bottom-right-radius: 0 0;
+    }
+
+    &.-boxed:last-of-type input {
+      border-top: 0;
+      border-top-left-radius: 0 0;
+      border-top-right-radius: 0 0;
+    }
+  }
+
+  .fields,
+  .button-box {
+    margin-top: 1.5rem;
+  }
+}

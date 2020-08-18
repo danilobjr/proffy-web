@@ -1,0 +1,132 @@
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  &.-boxed {
+    display: block;
+
+    > label {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      transform: translate(1.5rem, calc(2rem - 50%)) scale(1);
+      transform-origin: left top;
+    }
+
+    > input {
+      box-sizing: content-box;
+
+      width: calc(100% - 3rem);
+      height: 1.5rem;
+      padding: 1.775rem 1.5rem 0.6rem 1.44rem;
+
+      background-color: $color-shapes-2;
+      border: 1px solid $color-back-lines-on-white;
+      border-radius: .5rem;
+    }
+
+    &:before {
+      content: "";
+
+      width: 2px;
+      height: 40px;
+
+      background: $color-purple;
+      border-radius: 1px;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      transform-origin: right center;
+      transform: translate(-1px, calc(2rem - 50%)) scaleX(0);
+
+      transition: transform $transition-input-duration $bezier-curve 0ms;
+    }
+
+    > label.-animated {
+      transition:
+        color $transition-input-duration $bezier-curve 0ms,
+        transform $transition-input-duration $bezier-curve 0ms;
+    }
+
+    &.-interactive > label {
+      transform: translate(1.5rem, .8rem) scale(.75);
+    }
+
+    &.-interactive .typography.-label {
+      transition: $transition-input-duration;
+    }
+
+    &.-focused:before {
+      border-radius: 2px;
+
+      transform: translate(-1px, calc(2rem - 50%)) scaleX(1);
+    }
+  }
+
+  &.-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+
+    > input {
+      width: 0;
+      height: 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    > label {
+      margin-left: .75rem;
+
+      cursor: pointer;
+    }
+
+    > .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      transform: translate(.5rem, .6rem);
+      opacity: 0;
+    }
+
+    &:before {
+      content: "";
+
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $color-shapes-1;
+      border: 1px solid $color-back-lines-on-white;
+      border-radius: .5rem;
+
+      display: block;
+    }
+
+    &.-checked:before {
+      background-color: $color-green;
+    }
+
+    &.-checked > .icon {
+      opacity: 1;
+    }
+  }
+
+  &.-password > .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(-1rem, calc(2rem - 50%));
+  }
+}

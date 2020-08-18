@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Example app using ReasonML & ReasonReact components
 
-## Available Scripts
+This example features:
 
-In the project directory, you can run:
+- An app that mixes together JavaScript and ReasonML components and functions
+- An app with two pages which has a common Counter component
+- That Counter component maintain the counter inside its module. This is used
+  primarily to illustrate that modules get initialized once and their state
+  variables persist in runtime
 
-### `yarn start`
+## Deploy your own
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Deploy the example using [Vercel](https://vercel.com):
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-reasonml)
 
-### `yarn test`
+## How to use
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Using `create-next-app`
 
-### `yarn build`
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npx create-next-app --example with-reasonml with-reasonml-app
+# or
+yarn create next-app --example with-reasonml with-reasonml-app
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Download manually
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download the example:
 
-### `yarn eject`
+```bash
+curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-reasonml
+cd with-reasonml
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install it and run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+npm run dev
+# or
+yarn
+yarn dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Build and run:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm run build
+npm run start
+# or
+yarn build
+yarn start
+```
 
-## Learn More
+Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Recommendation:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run BuckleScript build system `bsb -w` and `next -w` separately. For the sake
+of simple convention, `npm run dev` run both `bsb` and `next` concurrently.
+However, this doesn't offer the full [colorful and very, very, veeeery nice
+error
+output](https://reasonml.github.io/blog/2017/08/25/way-nicer-error-messages.html)
+experience that ReasonML can offer, don't miss it!
 
-### Code Splitting
+There are 2 convenience scripts to facilitate running these separate processes:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+1. `npm run dev:reason` - This script will start the ReasonML toolchain in
+   watch mode to re-compile whenever you make changes.
+2. `npm run dev:next` - This script will start the next.js development server
+   so that you will be able to access your site at the location output by the
+   script. This will also hot reload as you make changes.
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+You should start the scripts in the presented order.
