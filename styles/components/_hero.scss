@@ -1,9 +1,9 @@
 .hero-container {
-  height: 350px;
+  min-height: 350px;
   background-color: $color-purple;
 
   &.-brand {
-    background-image: url("/bg.png") no-repeat 50% 4rem;
+    background: $color-purple url("/bg.png") no-repeat 50% 4rem;
 
     display: flex;
     align-items: center;
