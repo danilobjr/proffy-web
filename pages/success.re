@@ -45,7 +45,7 @@ let default = () => {
   | None => <GenericSuccess />
   };
 
-  <Page className="success">
+  <PageContainer className="success">
     <PageContent>
       <div className="box">
         <Image name=Success />
@@ -54,5 +54,5 @@ let default = () => {
 
       <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
     </PageContent>
-  </Page>
+  </PageContainer>
 };

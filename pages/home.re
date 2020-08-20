@@ -7,7 +7,7 @@ let default = () => {
     router -> Next.Router.push(~url="/login", ());
   };
 
-  <Page className="home-page">
+  <PageContainer className="home-page">
     <Hero>
       <AppBar noBackButton=true>
         <img className="userimage" src="https://github.com/danilobjr.png" alt="user profile image" />
@@ -34,5 +34,5 @@ let default = () => {
         <Icon name=Heart />
       </footer>
     </PageContent>
-  </Page>
+  </PageContainer>
 };

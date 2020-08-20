@@ -22,7 +22,7 @@ let default = () => {
     router -> Next.Router.push(~url="/success?from=signup", ());
   };
 
-  <Page className="signup">
+  <PageContainer className="signup">
     <AppBar onBackClick=handleBackButtonClick>
       <PageIndicator amount=2 currentIndex=viewIndex />
     </AppBar>
@@ -85,5 +85,5 @@ let default = () => {
         </Slider.View>
       </Slider>
     </form>
-  </Page>;
+  </PageContainer>;
 };

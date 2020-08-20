@@ -32,7 +32,7 @@ let default = () => {
     router -> Next.Router.push(~url="/", ());
   };
 
-  <Page className="login-page">
+  <PageContainer className="login-page">
     <Hero.Brand />
 
     <PageContent>
@@ -78,5 +78,5 @@ let default = () => {
           <Button type_=Primary>"Enter"</Button>
         </form>
     </PageContent>
-  </Page>;
+  </PageContainer>;
 }

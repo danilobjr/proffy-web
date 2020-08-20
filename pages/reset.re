@@ -14,7 +14,7 @@ let default = () => {
     router -> Next.Router.push(~url="/success?from=reset", ());
   };
 
-  <Page className="reset-page">
+  <PageContainer className="reset-page">
     <Hero.Brand />
 
     <AppBar onBackClick=handleBackClick />
@@ -35,5 +35,5 @@ let default = () => {
         <Button type_=Primary onClick=handleSendClick>"Send"</Button>
       </form>
     </PageContent>
-  </Page>
+  </PageContainer>
 };
