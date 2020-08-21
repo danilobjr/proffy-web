@@ -1,0 +1,72 @@
+.page-container.profile-page {
+  > .hero-container {
+    justify-content: center;
+
+    > .userimage {
+      width: 8.75rem;
+
+      border-radius: 50%;
+    }
+
+    > .typography.-title {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .-card,
+  .-footer {
+    background-color: $color-shapes-1;
+    border: 1px solid $color-back-lines-on-white;
+    border-radius: $border-radius;
+  }
+
+  .-card {
+    background-color: $color-shapes-1;
+    border: 1px solid $color-back-lines-on-white;
+    border-radius: $border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    margin-top: -3rem;
+
+    fieldset:not(:first-of-type) {
+      margin-top: 2.5rem;
+    }
+
+    fieldset {
+      border: none;
+
+      padding: 0 0 .5rem;
+
+      display: flex;
+    }
+
+    fieldset > .typography.-title {
+      border-bottom: 1px solid $color-back-lines-on-white;
+
+      padding-bottom: .5rem;
+    }
+
+    .form-field {
+      margin-top: 1.5rem;
+
+      align-items: stretch;
+
+      input {
+        background-color: $color-shapes-2;
+        border-radius: .5rem;
+        border: 1px solid $color-back-lines-on-white;
+
+        padding: 1rem;
+        margin-top: .25rem;
+      }
+    }
+  }
+
+  .-footer {
+    background-color: $color-shapes-2;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
