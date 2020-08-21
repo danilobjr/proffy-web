@@ -8,17 +8,15 @@ let default = () => {
   };
 
   <PageContainer className="home-page">
-    <Hero>
+    <Hero.Container>
       <AppBar noBackButton=true>
         <img className="userimage" src="https://github.com/danilobjr.png" alt="user profile image" />
         <Text>"Danilo Barros"</Text>
         <Button icon=Power onClick=handleLogoutClick />
       </AppBar>
 
-      <div className="box">
-        <Image name=Illustration />
-      </div>
-    </Hero>
+      <Image name=Welcome />
+    </Hero.Container>
 
     <PageContent>
       <Text type_=TextBigger>"Welcome"</Text>

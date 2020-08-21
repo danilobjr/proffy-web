@@ -2,16 +2,21 @@
   min-height: 350px;
   background-color: $color-purple;
 
-  &.-brand {
-    background: $color-purple url("/bg.png") no-repeat 50% 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    display: flex;
-    align-items: center;
+  &.-brand {
     justify-content: center;
 
     > .box {
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
+  }
+
+  &.-bg {
+    background: $color-purple url("/bg.png") no-repeat 50% 4rem;
   }
 }

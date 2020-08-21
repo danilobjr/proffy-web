@@ -1,12 +1,12 @@
 type t =
-  | Illustration
+  | Welcome
   | Success;
 
 [@react.component]
 let make = (~name: t) => {
   switch name {
-  | Illustration =>
-    <svg width="327" height="192" viewBox="0 0 327 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  | Welcome =>
+    <svg className="image -welcome" width="327" height="192" viewBox="0 0 327 192" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M166.914 190.695C167.576 187.228 169.632 184.05 172.519 182.02" stroke="#04D361" strokeWidth="0.779" strokeMiterlimit="10"/>
       <path d="M166.824 191.671C166.948 188.776 168.068 181.807 170.717 177.444" stroke="#04D361" strokeWidth="0.779" strokeMiterlimit="10"/>
       <path d="M166.864 191.312C167.322 186.149 167.282 180.443 166.476 175.32" stroke="#04D361" strokeWidth="0.779" strokeMiterlimit="10"/>

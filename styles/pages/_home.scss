@@ -1,9 +1,4 @@
 .page-container.home-page {
-  > .hero-container {
-    display: flex;
-    flex-direction: column;
-  }
-
   > .hero-container > .app-bar {
     > .userimage {
       width: 2.5rem;
@@ -26,11 +21,8 @@
     }
   }
 
-  > .hero-container > .box {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  > .hero-container > .image.-welcome {
+    margin: auto;
   }
 
   > .page-content {
