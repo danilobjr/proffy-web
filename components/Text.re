@@ -14,7 +14,13 @@ type textType =
   | TitleBigger;
 
 [@react.component]
-let make = (~className="", ~bold=false, ~purpleBg=false, ~type_: textType=Text, ~children) => {
+let make = (
+  ~className="",
+  ~bold=false,
+  ~purpleBg=false,
+  ~type_: textType=Text,
+  ~onClick={_ => ()},
+  ~children) => {
   let typeClass =
     switch type_ {
     | Button => "-button"
@@ -41,5 +47,5 @@ let make = (~className="", ~bold=false, ~purpleBg=false, ~type_: textType=Text, 
 
   let classes = append(["typography", typeClass, boldClass, variantClassOnPurpleBg, className]);
 
-  <span className=classes>children -> string</span>;
+  <span className=classes onClick>children -> string</span>;
 };
