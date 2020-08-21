@@ -23,8 +23,8 @@ let default = () => {
   };
 
   <PageContainer className="signup">
-    <AppBar onBackClick=handleBackButtonClick>
-      <PageIndicator amount=2 currentIndex=viewIndex />
+    <AppBar light=true onBackClick=handleBackButtonClick>
+      <PageIndicator className="rightcolumn" amount=2 currentIndex=viewIndex />
     </AppBar>
 
     <PageContent>

@@ -1,23 +1,27 @@
 .page-container.home-page {
   > .hero-container > .app-bar {
-    > .userimage {
+    grid-template-columns: 2.5rem 1fr 1fr;
+
+    .userimage {
       width: 2.5rem;
 
       border-radius: 50%;
     }
 
-    > .typography.-text {
+    .typography.-text {
       font: 500 .75rem Poppins;
-      color: #D4C2FF;
+      color: $color-text-on-purple-base;
       margin-left: 1rem;
+
+      justify-self: start;
     }
 
-    > .button-box {
+    .button-box {
       width: 2.5rem;
       height: 2.5rem;
       margin-left: auto;
 
-      background-color: #774DD6;
+      background-color: $color-purple-dark;
     }
   }
 

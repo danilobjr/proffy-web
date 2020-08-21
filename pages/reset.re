@@ -17,7 +17,7 @@ let default = () => {
   <PageContainer className="reset-page">
     <Hero.Brand />
 
-    <AppBar onBackClick=handleBackClick />
+    <AppBar light=true onBackClick=handleBackClick />
 
     <PageContent>
       <header>

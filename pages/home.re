@@ -1,18 +1,23 @@
 [@react.component]
 let default = () => {
+  // TODO create a useUrlPush to encapsulate next code for push a url
   let router = Next.useRouter();
 
-  let handleLogoutClick = e => {
-    e -> ReactEvent.Mouse.preventDefault;
-    router -> Next.Router.push(~url="/login", ());
-  };
+  let handleLogoutClick = _ => router -> Next.Router.push(~url="/login", ());
+  let goToProfilePage = _ => router -> Next.Router.push(~url="/profile", ());
 
   <PageContainer className="home-page">
     <Hero.Container>
       <AppBar noBackButton=true>
-        <img className="userimage" src="https://github.com/danilobjr.png" alt="user profile image" />
-        <Text>"Danilo Barros"</Text>
-        <Button icon=Power onClick=handleLogoutClick />
+        <img
+          className="userimage leftcolumn"
+          src="https://github.com/danilobjr.png"
+          alt="user profile image"
+          onClick=goToProfilePage
+        />
+
+        <Text onClick=goToProfilePage>"Danilo Barros"</Text>
+        <Button className="rightcolumn" icon=Power onClick=handleLogoutClick />
       </AppBar>
 
       <Image name=Welcome />

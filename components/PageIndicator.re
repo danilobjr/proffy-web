@@ -1,5 +1,9 @@
+open Classnames;
+
 [@react.component]
-let make = (~amount=1, ~currentIndex=0) => {
+let make = (~className="", ~amount=1, ~currentIndex=0) => {
+  let classes = append(["page-indicator", className]);
+
   let indicators = amount
     -> Array.make ("anything")
     -> Array.mapi ((index, _) => {
@@ -10,5 +14,5 @@ let make = (~amount=1, ~currentIndex=0) => {
     }, _)
     -> React.array;
 
-  <div className="page-indicator">indicators</div>;
+  <div className=classes>indicators</div>;
 };
