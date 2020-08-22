@@ -2,14 +2,8 @@
   overflow-x: hidden;
 
   > .slider {
-    display: flex;
-    flex-direction: row;
-    // direction: ltr;
-
-    // will-change: transform;
     transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s;
     transform: translate(0%, 0px);
-
   }
 
   > .slider > .view {

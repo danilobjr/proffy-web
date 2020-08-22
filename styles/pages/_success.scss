@@ -1,16 +1,10 @@
-.page-container.success {
+.page-container.success-page {
   background-color: $color-purple;
 
-  > .page-content {
+  > .box {
     > .box {
       background: url('/success-bg.svg') no-repeat center center;
-      background-size: cover;
-
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      background-size: contain;
     }
 
     > .box > .typography.-title.-bigger {

@@ -1,3 +1,4 @@
+open Flex;
 open FormField;
 
 [@react.component]
@@ -19,10 +20,10 @@ let default = () => {
       <Text type_=Title purpleBg=true>"Danilo Barros"</Text>
     </Hero.Container>
 
-    <Box>
+    <Box className="content" padding=Spacing.Sm>
       <form>
-        <Box className="-card" padding=Box.Md>
-          <fieldset>
+        <Box className="card" padding=Spacing.Md>
+          <Flex className="fieldset" direction=Direction.Column>
             <Text type_=Title>"Your data"</Text>
 
             <InputText
@@ -36,7 +37,7 @@ let default = () => {
             />
 
             <InputText
-              label="e-mail"
+              label="E-mail"
               name="email"
             />
 
@@ -49,9 +50,9 @@ let default = () => {
               label="About you"
               name="about"
             />
-          </fieldset>
+          </Flex>
 
-          <fieldset>
+          <Flex className="fieldset" direction=Direction.Column>
             <Text type_=Title>"About lesson"</Text>
 
             <InputText
@@ -63,9 +64,9 @@ let default = () => {
               label="Cost per hour"
               name="cost"
             />
-          </fieldset>
+          </Flex>
 
-          <fieldset>
+          <Flex className="fieldset" direction=Direction.Column>
             <Text type_=Title>"Schedule"</Text>
 
             <InputText
@@ -82,10 +83,10 @@ let default = () => {
               label="To"
               name="to"
             />
-          </fieldset>
+          </Flex>
         </Box>
 
-        <Box className="-footer" padding=Box.Md>
+        <Box className="footer" padding=Spacing.Md>
           <Button type_=Primary>"Save"</Button>
         </Box>
       </form>

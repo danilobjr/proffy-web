@@ -1,3 +1,5 @@
+open Flex;
+
 [@react.component]
 let default = () => {
   // TODO create a useUrlPush to encapsulate next code for push a url
@@ -23,19 +25,26 @@ let default = () => {
       <Image name=Welcome />
     </Hero.Container>
 
-    <PageContent>
+    <Flex
+      className="content"
+      alignItems=AlignItems.Stretch
+      direction=Direction.Column
+      grow=true
+      paddingX=Spacing.Lg
+      paddingY=Spacing.Xl2
+    >
       <Text type_=TextBigger>"Welcome"</Text>
       <Text type_=TextBigger bold=true>"What you're looking for?"</Text>
 
-      <div className="buttons">
+      <Flex className="buttons" alignItems=AlignItems.Stretch>
         <Button icon=Book>"Learn"</Button>
         <Button type_=Primary icon=Easel>"Teach"</Button>
-      </div>
+      </Flex>
 
       <footer>
         <Text>"Connections already scheduled"</Text>
         <Icon name=Heart />
       </footer>
-    </PageContent>
+    </Flex>
   </PageContainer>
 };

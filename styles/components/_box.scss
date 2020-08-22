@@ -1,25 +1,60 @@
 .box {
   &.-padding {
-    &-xs { padding: .5rem; }
-    &-sm { padding: 1rem; }
-    &-md { padding: 1.5rem; }
-    &-lg { padding: 2rem; }
-    &-xl { padding: 2.5rem; }
+    &-xs  { padding: .5rem; }
+    &-sm  { padding: 1rem; }
+    &-md  { padding: 1.5rem; }
+    &-lg  { padding: 2rem; }
+    &-xl  { padding: 2.5rem; }
+    &-xl2 { padding: 3rem; }
+    &-xl3 { padding: 3.5rem; }
   }
 
   &.-padding-horizontal {
-    &-xs { padding-left: .5rem;  padding-right: .5rem;  }
-    &-sm { padding-left: 1rem;   padding-right: 1rem;   }
-    &-md { padding-left: 1.5rem; padding-right: 1.5rem; }
-    &-lg { padding-left: 2rem;   padding-right: 2rem;   }
-    &-xl { padding-left: 2.5rem; padding-right: 2.5rem; }
+    &-xs  { padding-left: .5rem;  padding-right: .5rem;  }
+    &-sm  { padding-left: 1rem;   padding-right: 1rem;   }
+    &-md  { padding-left: 1.5rem; padding-right: 1.5rem; }
+    &-lg  { padding-left: 2rem;   padding-right: 2rem;   }
+    &-xl  { padding-left: 2.5rem; padding-right: 2.5rem; }
+    &-xl2 { padding-left: 3rem;   padding-right: 3rem; }
+    &-xl3 { padding-left: 3.5rem; padding-right: 3.5rem; }
   }
 
   &.-padding-vertical {
-    &-xs { padding-top: .5rem;  padding-bottom: .5rem;  }
-    &-sm { padding-top: 1rem;   padding-bottom: 1rem;   }
-    &-md { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-    &-lg { padding-top: 2rem;   padding-bottom: 2rem;   }
-    &-xl { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    &-xs  { padding-top: .5rem;  padding-bottom: .5rem;  }
+    &-sm  { padding-top: 1rem;   padding-bottom: 1rem;   }
+    &-md  { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    &-lg  { padding-top: 2rem;   padding-bottom: 2rem;   }
+    &-xl  { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    &-xl2 { padding-top: 3rem;   padding-bottom: 3rem; }
+    &-xl3 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  }
+
+  &.-padding-top {
+    &-xs  { padding-top: .5rem; }
+    &-sm  { padding-top: 1rem; }
+    &-md  { padding-top: 1.5rem; }
+    &-lg  { padding-top: 2rem; }
+    &-xl  { padding-top: 2.5rem; }
+    &-xl2 { padding-top: 3rem; }
+    &-xl3 { padding-top: 3.5rem; }
+  }
+
+  &.-flex {
+    display: flex;
+
+    &-align-items-start   { align-items: start; }
+    &-align-items-center  { align-items: center; }
+    &-align-items-end     { align-items: end; }
+    &-align-items-stretch { align-items: stretch; }
+
+    &-direction-column { flex-direction: column; }
+    &-direction-row { flex-direction: row; }
+
+    &-grow { flex-grow: 1; }
+
+    &-justify-content-start        { justify-content: start; }
+    &-justify-content-center       { justify-content: center; }
+    &-justify-content-end          { justify-content: end; }
+    &-justify-content-spacebetween { justify-content: space-between; }
   }
 }

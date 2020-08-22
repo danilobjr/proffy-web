@@ -1,18 +1,11 @@
-.page-container.reset-page > .page-content {
-  padding-top: 1.5rem;
-
-  > header .typography.-text,
+.page-container.reset-page > .content {
+  > .header .typography.-text,
   > form > .form-field,
   > form > .button-box {
     margin-top: 1.5rem;
   }
 
-  > header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  > header .typography.-text {
+  > .header .typography.-text {
     width: 85%;
   }
 

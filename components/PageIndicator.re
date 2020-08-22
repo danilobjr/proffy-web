@@ -1,3 +1,4 @@
+open Box;
 open Classnames;
 
 [@react.component]
@@ -14,5 +15,5 @@ let make = (~className="", ~amount=1, ~currentIndex=0) => {
     }, _)
     -> React.array;
 
-  <div className=classes>indicators</div>;
+  <Flex className=classes alignItems=AlignItems.Center>indicators</Flex>;
 };

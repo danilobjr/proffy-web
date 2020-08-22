@@ -1,3 +1,4 @@
+open Flex;
 open Image;
 
 module GenericSuccess = {
@@ -45,14 +46,24 @@ let default = () => {
   | None => <GenericSuccess />
   };
 
-  <PageContainer className="success">
-    <PageContent>
-      <div className="box">
+  <PageContainer className="success-page">
+    <Flex
+      direction=Direction.Column
+      grow=true
+      paddingX=Spacing.Lg
+      paddingY=Spacing.Xl2
+    >
+      <Flex
+        alignItems=AlignItems.Center
+        justifyContent=JustifyContent.Center
+        direction=Direction.Column
+        grow=true
+      >
         <Image name=Success />
         content
-      </div>
+      </Flex>
 
       <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
-    </PageContent>
+    </Flex>
   </PageContainer>
 };

@@ -1,27 +1,6 @@
 .page-container.signup {
-  .page-content {
-    > form {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  .slider-container {
-    margin-top: auto;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-
-    .-text {
-      margin-top: 1.25rem;
-    }
-  }
-
-  .page-content > .-title {
-    margin-top: auto;
+  > .header > .-text {
+    margin-top: 1.25rem;
   }
 
   .form-field {

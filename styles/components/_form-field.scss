@@ -1,11 +1,6 @@
 .form-field {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-
   &.-boxed {
     display: block;
 
@@ -71,10 +66,6 @@
   }
 
   &.-checkbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
     cursor: pointer;
 
     > input {

@@ -1,3 +1,4 @@
+open Box;
 open FormField;
 
 type formData = {
@@ -35,13 +36,20 @@ let default = () => {
   <PageContainer className="login-page">
     <Hero.Brand />
 
-    <PageContent>
-      <header>
+    <Box
+      grow=true
+      paddingX=Spacing.Lg
+      paddingY=Spacing.Xl2
+    >
+      <Flex
+        alignItems=AlignItems.Center
+        justifyContent=JustifyContent.SpaceBetween
+      >
         <Text type_=Title>"Login"</Text>
         <Link className="sign-up" href="/signup">
           "Sign up"
         </Link>
-      </header>
+      </Flex>
 
       <form spellCheck=false onSubmit=handleFormSubmit>
         <div className="main-fields">
@@ -62,7 +70,11 @@ let default = () => {
           />
         </div>
 
-        <div className="remember-box">
+        <Flex
+          className="remember"
+          alignItems=AlignItems.Center
+          justifyContent=JustifyContent.SpaceBetween
+        >
           <Checkbox
             label="Remember me"
             name="rememberme"
@@ -73,10 +85,10 @@ let default = () => {
           <Link className="forgot" href="/reset">
             "Forgot my password"
           </Link>
-        </div>
+        </Flex>
 
         <Button type_=Primary>"Enter"</Button>
       </form>
-    </PageContent>
+    </Box>
   </PageContainer>;
 }
