@@ -1,3 +1,4 @@
+open Flex;
 open FormField;
 
 [@react.component]
@@ -22,22 +23,26 @@ let default = () => {
     router -> Next.Router.push(~url="/success?from=signup", ());
   };
 
-  <Page className="signup">
-    <AppBar onBackClick=handleBackButtonClick>
-      <PageIndicator amount=2 currentIndex=viewIndex />
+  <PageContainer className="signup">
+    <AppBar light=true onBackClick=handleBackButtonClick>
+      <PageIndicator className="rightcolumn" amount=2 currentIndex=viewIndex />
     </AppBar>
 
-    <PageContent>
-      <header>
-        <Text type_=TitleBigger>"Create a free account"</Text>
-        <Text>"We need some information about you"</Text>
-      </header>
-    </PageContent>
+    <Flex
+      className="header"
+      direction=Direction.Column
+      grow=true
+      paddingX=Spacing.Lg
+      paddingY=Spacing.Xl2
+    >
+      <Text type_=TitleBigger>"Create a free account"</Text>
+      <Text>"We need some information about you"</Text>
+    </Flex>
 
     <form>
       <Slider index=viewIndex>
         <Slider.View>
-          <PageContent>
+          <Box paddingX=Spacing.Lg paddingY=Spacing.Xl2>
             <Text type_=Title>
               "01. Who are you?"
             </Text>
@@ -57,11 +62,11 @@ let default = () => {
             </div>
 
             <Button onClick=handleNextButtonClick>"Next"</Button>
-          </PageContent>
+          </Box>
         </Slider.View>
 
         <Slider.View>
-          <PageContent>
+          <Box paddingX=Spacing.Lg paddingY=Spacing.Xl2>
             <Text type_=Title>
               "02. Email and Password"
             </Text>
@@ -81,9 +86,9 @@ let default = () => {
             </div>
 
             <Button type_=Primary onClick=handleCreateButtonClick>"Create account"</Button>
-          </PageContent>
+          </Box>
         </Slider.View>
       </Slider>
     </form>
-  </Page>;
+  </PageContainer>;
 };

@@ -37,8 +37,8 @@ let make = (~index=0, ~children) => {
   let style = ReactDOM.Style.make(~transform="translate(-" ++ string_of_int(index) ++ "%, 0px)", ());
 
   <div className="slider-container">
-    <div className="slider" style>
+    <Flex className="slider" style>
       children
-    </div>
+    </Flex>
   </div>;
 };

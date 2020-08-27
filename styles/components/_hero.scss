@@ -1,17 +1,8 @@
 .hero-container {
-  min-height: 350px;
+  min-height: 320px;
   background-color: $color-purple;
 
-  &.-brand {
-    background: $color-purple url("/bg.png") no-repeat 50% 4rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    > .box {
-      display: flex;
-      flex-direction: column;
-    }
+  &.-bg {
+    background: $color-purple url("/bg.png") no-repeat center 35%;
   }
 }

@@ -1,3 +1,4 @@
+open Flex;
 open FormField;
 
 [@react.component]
@@ -14,16 +15,28 @@ let default = () => {
     router -> Next.Router.push(~url="/success?from=reset", ());
   };
 
-  <Page className="reset-page">
+  <PageContainer className="reset-page">
     <Hero.Brand />
 
-    <AppBar onBackClick=handleBackClick />
+    <AppBar light=true onBackClick=handleBackClick />
 
-    <PageContent>
-      <header>
+    <Flex
+      className="content"
+      alignItems=AlignItems.Stretch
+      direction=Direction.Column
+      grow=true
+      paddingX=Spacing.Lg
+      paddingY=Spacing.Xl2
+      paddingTop=Spacing.Md
+    >
+      <Flex
+        className="header"
+        direction=Direction.Column
+        grow=true
+      >
         <Text type_=Title>"Forgot your password?"</Text>
         <Text>"No problem. We send a reset password link to your e-mail"</Text>
-      </header>
+      </Flex>
 
       <form>
         <InputText
@@ -34,6 +47,6 @@ let default = () => {
 
         <Button type_=Primary onClick=handleSendClick>"Send"</Button>
       </form>
-    </PageContent>
-  </Page>
+    </Flex>
+  </PageContainer>
 };

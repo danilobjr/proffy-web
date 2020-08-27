@@ -1,19 +1,5 @@
 .login-page {
-  > .page-content {
-    padding: 3.5rem 2rem 4rem;
-
-    flex: 1;
-
-    > header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    > header > .-title {
-      margin: 0;
-    }
-
+  > .box {
     > form {
       margin-top: 1.5rem;
     }
@@ -27,12 +13,8 @@
       border-radius: 0 0 .5rem .5rem;
     }
 
-    .remember-box {
+    .remember {
       margin-top: 1.5rem;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     .button-box {

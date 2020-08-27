@@ -1,3 +1,4 @@
+open Box;
 open Classnames;
 
 type refType = React.ref(Js.nullable(Dom.htmlInputElement));
@@ -26,7 +27,10 @@ module InputText = {
     let handleInputBlur = _ => setFocused(_ => false);
     let handleInputFocus = _ => setFocused(_ => true);
 
-    <div className>
+    <Flex
+      className
+      direction=FlexDirection.Column
+    >
       <label className="-animated" htmlFor=name>
         <Text type_=Label>label</Text>
       </label>
@@ -40,7 +44,7 @@ module InputText = {
         onChange
         onFocus={handleInputFocus}
       />
-    </div>;
+    </Flex>;
   };
 };
 
@@ -68,7 +72,10 @@ module InputPassword = {
     let handleInputBlur = _ => setFocused(_ => false);
     let handleInputFocus = _ => setFocused(_ => true);
 
-    <div className>
+    <Flex
+      className
+      direction=FlexDirection.Column
+    >
       <label className="-animated" htmlFor=name>
         <Text type_=Label>label</Text>
       </label>
@@ -84,7 +91,7 @@ module InputPassword = {
       />
 
       <Icon name=SeePassword />
-    </div>;
+    </Flex>;
   };
 };
 
@@ -96,11 +103,16 @@ module Checkbox = {
       "-checked"->on(checked),
     ]);
 
-    let handleDivClick = _ => {
+    let handleClick = _ => {
       onChange(!checked);
     };
 
-    <div className onClick=handleDivClick>
+    <Flex
+      className
+      direction=FlexDirection.Row
+      alignItems=AlignItems.Center
+      onClick=handleClick
+    >
       <input
         name
         type_="checkbox"
@@ -112,6 +124,6 @@ module Checkbox = {
       </label>
 
       <Icon name=Check />
-    </div>;
+    </Flex>;
   };
 };

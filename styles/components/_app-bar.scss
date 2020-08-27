@@ -2,7 +2,48 @@
   min-height: 4rem;
   padding: 0 2rem;
 
-  display: flex;
+  background-color: $color-purple-little;
+  border-bottom: 1px solid $color-purple-dark;
+
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
+  grid-template-areas: "leftcolumn centercolumn rightcolumn";
+
+  .leftcolumn {
+    grid-area: leftcolumn;
+    justify-self: start;
+  }
+
+  .centercolumn {
+    grid-area: centercolumn;
+  }
+
+  .rightcolumn {
+    grid-area: rightcolumn;
+    justify-self: end;
+  }
+
+  .icon.-back path {
+    stroke: $color-text-on-purple-base;
+  }
+
+  .typography {
+    color: $color-text-on-purple-base;
+  }
+
+  &.-light {
+    background-color: unset;
+    border: none;
+
+    .icon.-back path {
+      stroke: $color-text-complement;
+    }
+
+    .typography {
+      color: $color-text-complement;
+    }
+  }
 }

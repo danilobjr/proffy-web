@@ -1,82 +1,74 @@
 .page-container.home-page {
-  > .hero-container {
-    display: flex;
-    flex-direction: column;
-  }
-
   > .hero-container > .app-bar {
-    > .userimage {
+    grid-template-columns: 2.5rem 1fr 1fr;
+
+    .userimage {
       width: 2.5rem;
 
       border-radius: 50%;
     }
 
-    > .typography.-text {
+    .typography.-text {
       font: 500 .75rem Poppins;
-      color: #D4C2FF;
+      color: $color-text-on-purple-base;
       margin-left: 1rem;
+
+      justify-self: start;
     }
 
-    > .button-box {
+    .button-box {
       width: 2.5rem;
       height: 2.5rem;
       margin-left: auto;
 
-      background-color: #774DD6;
+      background-color: $color-purple-dark;
     }
   }
 
-  > .hero-container > .box {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  > .hero-container > .image.-welcome {
+    margin: auto;
   }
 
-  > .page-content {
-    > .buttons {
-      height: 10rem;
-      margin: 1.5rem 0;
+  > .content > .buttons {
+    height: 10rem;
+    margin: 1.5rem 0;
+
+    > .button-box {
+      height: unset;
+      padding: 1.5rem;
 
       display: flex;
-
-      > .button-box {
-        height: unset;
-        padding: 1.5rem;
-
-        display: flex;
-        flex-direction: column;
-      }
-
-      > .button-box > .typography.-button {
-        margin-top: auto;
-
-        font-size: 1.25rem;
-      }
-
-      > .button-box:last-child {
-        margin-left: 1rem;
-      }
+      flex-direction: column;
     }
 
-    > footer {
-      width: 50%;
-
+    > .button-box > .typography.-button {
       margin-top: auto;
 
-      > .typography.-text {
-        color: $color-text-complement;
-        font-size: .75rem;
-      }
+      font-size: 1.25rem;
+    }
 
-      > .icon {
-        width: 14px;
-        margin-left: .5rem;
+    > .button-box:last-child {
+      margin-left: 1rem;
+    }
+  }
 
-        transform: translateY(.3rem);
+  > .content > footer {
+    width: 50%;
 
-        opacity: .5;
-      }
+    margin-top: auto;
+
+    > .typography.-text {
+      color: $color-text-complement;
+      font-size: .75rem;
+    }
+
+    > .icon {
+      width: 14px;
+      margin-left: .5rem;
+
+      transform: translateY(.3rem);
+
+      opacity: .5;
     }
   }
 }

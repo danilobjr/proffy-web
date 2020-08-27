@@ -1,22 +1,30 @@
+open Box;
 open Classnames;
 
-[@react.component]
-let make = (~className="", ~children) => {
-  let classes = append(["hero-container", className]);
+module Container = {
+  [@react.component]
+  let make = (~className="", ~showBg=false, ~justifyContent=?, ~children) => {
+    let classes = append(["hero-container", "-bg" -> on(showBg), className]);
 
-  <section className=classes>
-    children
-  </section>;
+    <Flex
+      className=classes
+      direction=FlexDirection.Column
+      alignItems=AlignItems.Center
+      ?justifyContent
+    >
+      children
+    </Flex>;
+  };
 };
 
 module Brand = {
   [@react.component]
   let make = () => {
-    <section className="hero-container -brand">
-      <div className="box">
+    <Container className="-brand" showBg=true justifyContent=JustifyContent.Center>
+      <Flex direction=FlexDirection.Column justifyContent=JustifyContent.Center>
         <ProffyLogo />
         <Text type_=Text purpleBg=true>"Lessons platform"</Text>
-      </div>
-    </section>;
+      </Flex>
+    </Container>;
   };
 };
