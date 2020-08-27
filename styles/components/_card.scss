@@ -1,0 +1,29 @@
+.card {
+  background-color: $color-shapes-1;
+  border: 1px solid $color-back-lines-on-white;
+  border-radius: $border-radius;
+
+  > .title {
+    padding-bottom: 0.5rem;
+
+    border-bottom: 1px solid $color-back-lines-on-white;
+  }
+
+  > .title:not(:first-of-type) {
+    margin-top: 2.5rem;
+  }
+
+  .-has-footer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.card + .footer {
+  background-color: $color-shapes-2;
+  border: 1px solid $color-back-lines-on-white;
+  border-top: none;
+  border-radius: $border-radius;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

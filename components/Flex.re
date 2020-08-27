@@ -13,6 +13,7 @@ let make = (
   ~justifyContent=JustifyContent.Start,
   ~padding=Spacing.Unset,
   ~paddingTop=Spacing.Unset,
+  ~paddingBottom=Spacing.Unset,
   ~paddingX=Spacing.Unset,
   ~paddingY=Spacing.Unset,
   ~onClick=?,
@@ -35,6 +36,7 @@ let make = (
     justifyContent
     padding
     paddingTop
+    paddingBottom
     paddingX
     paddingY
     ?style

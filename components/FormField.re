@@ -5,7 +5,7 @@ type refType = React.ref(Js.nullable(Dom.htmlInputElement));
 
 module InputText = {
   [@react.component]
-  let make = (~boxed=false, ~label, ~name, ~value="", ~onChange={_ => ()}) => {
+  let make = (~className="", ~boxed=false, ~label, ~name, ~value="", ~onChange={_ => ()}) => {
     let valuePropIsEmpty = value
       -> String.trim
       -> String.length
@@ -21,7 +21,8 @@ module InputText = {
       "form-field",
       "-boxed"->on(boxed),
       "-focused"->on(focused),
-      "-interactive"->on(interactive)
+      "-interactive"->on(interactive),
+      className
     ]);
 
     let handleInputBlur = _ => setFocused(_ => false);
@@ -50,7 +51,7 @@ module InputText = {
 
 module InputPassword = {
   [@react.component]
-  let make = (~boxed=false, ~label, ~name, ~value="", ~onChange={_ => ()}) => {
+  let make = (~className="", ~boxed=false, ~label, ~name, ~value="", ~onChange={_ => ()}) => {
     let valuePropIsEmpty = value
       -> String.trim
       -> String.length
@@ -66,7 +67,8 @@ module InputPassword = {
       "form-field -password",
       "-boxed"->on(boxed),
       "-focused"->on(focused),
-      "-interactive"->on(interactive)
+      "-interactive"->on(interactive),
+      className
     ]);
 
     let handleInputBlur = _ => setFocused(_ => false);
@@ -97,10 +99,11 @@ module InputPassword = {
 
 module Checkbox = {
   [@react.component]
-  let make = (~label, ~name, ~checked=false, ~onChange={_ => ()}) => {
+  let make = (~className="", ~label, ~name, ~checked=false, ~onChange={_ => ()}) => {
     let className = append([
       "form-field -checkbox",
       "-checked"->on(checked),
+      className
     ]);
 
     let handleClick = _ => {

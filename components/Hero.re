@@ -3,14 +3,24 @@ open Classnames;
 
 module Container = {
   [@react.component]
-  let make = (~className="", ~showBg=false, ~justifyContent=?, ~children) => {
+  let make = (
+    ~className="",
+    ~alignItems=AlignItems.Center,
+    ~justifyContent=?,
+    ~padding=?,
+    ~paddingBottom=?,
+    ~showBg=false,
+    ~children) => {
+
     let classes = append(["hero-container", "-bg" -> on(showBg), className]);
 
     <Flex
       className=classes
       direction=FlexDirection.Column
-      alignItems=AlignItems.Center
+      alignItems
       ?justifyContent
+      ?padding
+      ?paddingBottom
     >
       children
     </Flex>;

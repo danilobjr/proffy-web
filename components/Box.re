@@ -34,6 +34,7 @@ module Spacing = {
     | Xl
     | Xl2
     | Xl3
+    | Xl4
     | Unset;
 };
 
@@ -72,6 +73,7 @@ module Utils = {
     | Spacing.Xl => "-padding-xl"
     | Spacing.Xl2 => "-padding-xl2"
     | Spacing.Xl3 => "-padding-xl3"
+    | Spacing.Xl4 => "-padding-xl4"
     | Spacing.Unset => ""
     };
 
@@ -84,6 +86,20 @@ module Utils = {
     | Spacing.Xl =>  "-padding-top-xl"
     | Spacing.Xl2 => "-padding-top-xl2"
     | Spacing.Xl3 => "-padding-top-xl3"
+    | Spacing.Xl4 => "-padding-top-xl4"
+    | Spacing.Unset => ""
+    };
+
+  let mapPaddingBottomToClassname = paddingBottom =>
+    switch paddingBottom {
+    | Spacing.Xs =>  "-padding-bottom-xs"
+    | Spacing.Sm =>  "-padding-bottom-sm"
+    | Spacing.Md =>  "-padding-bottom-md"
+    | Spacing.Lg =>  "-padding-bottom-lg"
+    | Spacing.Xl =>  "-padding-bottom-xl"
+    | Spacing.Xl2 => "-padding-bottom-xl2"
+    | Spacing.Xl3 => "-padding-bottom-xl3"
+    | Spacing.Xl4 => "-padding-bottom-xl4"
     | Spacing.Unset => ""
     };
 
@@ -96,6 +112,7 @@ module Utils = {
     | Spacing.Xl =>  "-padding-horizontal-xl"
     | Spacing.Xl2 => "-padding-horizontal-xl2"
     | Spacing.Xl3 => "-padding-horizontal-xl3"
+    | Spacing.Xl4 => "-padding-horizontal-xl4"
     | Spacing.Unset => ""
     };
 
@@ -108,6 +125,7 @@ module Utils = {
     | Spacing.Xl =>  "-padding-vertical-xl"
     | Spacing.Xl2 => "-padding-vertical-xl2"
     | Spacing.Xl3 => "-padding-vertical-xl3"
+    | Spacing.Xl4 => "-padding-vertical-xl4"
     | Spacing.Unset => ""
     };
 };
@@ -122,6 +140,7 @@ let make = (
   ~justifyContent=JustifyContent.Unset,
   ~padding=Spacing.Unset,
   ~paddingTop=Spacing.Unset,
+  ~paddingBottom=Spacing.Unset,
   ~paddingX=Spacing.Unset,
   ~paddingY=Spacing.Unset,
   ~onClick=?,
@@ -133,6 +152,7 @@ let make = (
   let justifyContentClasses = Utils.mapJustifyContentToClassname(justifyContent);
   let paddingClasses = Utils.mapPaddingToClassname(padding);
   let paddingTopClasses = Utils.mapPaddingTopToClassname(paddingTop);
+  let paddingBottomClasses = Utils.mapPaddingBottomToClassname(paddingBottom);
   let paddingHorizontalClasses = Utils.mapPaddingHorizontalToClassname(paddingX);
   let paddingVerticalClasses = Utils.mapPaddingVerticalToClassname(paddingY);
 
@@ -145,6 +165,7 @@ let make = (
     "-flex-grow" -> on(grow),
     paddingClasses,
     paddingTopClasses,
+    paddingBottomClasses,
     paddingHorizontalClasses,
     paddingVerticalClasses,
     className,

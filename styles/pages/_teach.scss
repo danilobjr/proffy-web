@@ -1,0 +1,17 @@
+.page-container.teach-page {
+  > .hero-container {
+    min-height: unset;
+  }
+
+  > .hero-container > .subtitle {
+    margin-top: 1rem;
+  }
+
+  .content {
+    margin-top: -3rem;
+  }
+
+  .to-field {
+    margin-left: 1rem;
+  }
+}

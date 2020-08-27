@@ -7,6 +7,7 @@ let default = () => {
 
   let handleLogoutClick = _ => router -> Next.Router.push(~url="/login", ());
   let goToProfilePage = _ => router -> Next.Router.push(~url="/profile", ());
+  let goToTeachPage = _ => router -> Next.Router.push(~url="/teach", ());
 
   <PageContainer className="home-page">
     <Hero.Container>
@@ -38,7 +39,7 @@ let default = () => {
 
       <Flex className="buttons" alignItems=AlignItems.Stretch>
         <Button icon=Book>"Learn"</Button>
-        <Button type_=Primary icon=Easel>"Teach"</Button>
+        <Button type_=Primary icon=Easel onClick=goToTeachPage>"Teach"</Button>
       </Flex>
 
       <footer>
