@@ -9,6 +9,15 @@ module GenericSuccess = {
     </>;
 };
 
+module ResetPasswordSuccess = {
+  [@react.component]
+  let make = () =>
+    <>
+      <Text type_=TitleBigger purpleBg=true>"E-mail sent!"</Text>
+      <Text type_=Text purpleBg=true>"Check your e-mail and follow instructions to reset your password"</Text>
+    </>;
+};
+
 module SignupSuccess = {
   [@react.component]
   let make = () =>
@@ -18,13 +27,33 @@ module SignupSuccess = {
     </>;
 };
 
-module ResetPasswordSuccess = {
+module TeachSuccess = {
   [@react.component]
   let make = () =>
     <>
-      <Text type_=TitleBigger purpleBg=true>"E-mail sent!"</Text>
-      <Text type_=Text purpleBg=true>"Check your e-mail and follow instructions to reset your password"</Text>
+      <Text type_=TitleBigger purpleBg=true>"Well done!"</Text>
+      <Text type_=Text purpleBg=true>"You are in our list of available tutors. Now stay tuned on your WhatsApp"</Text>
     </>;
+};
+
+module Url = {
+  type fromType =
+    | Reset
+    | Signup
+    | Teach;
+
+  let queryParam = (value, param) =>
+    switch param {
+    | "from" =>
+      switch value {
+      | Some("reset") =>  Some(Reset)
+      | Some("signup") => Some(Signup)
+      | Some("teach") =>  Some(Teach)
+      | Some(_) => None
+      | None => None
+      };
+    | _ => None
+    }
 };
 
 [@react.component]
@@ -36,13 +65,26 @@ let default = () => {
     router -> Next.Router.push(~url="/login", ());
   };
 
+  let backToProfile = e => {
+    e -> ReactEvent.Mouse.preventDefault;
+    router -> Next.Router.push(~url="/profile", ());
+  };
+
   let fromPage = router.query
-    -> Js.Dict.get("from");
+    -> Js.Dict.get("from")
+    -> Url.queryParam("from");
 
   let content = switch fromPage {
-  | Some(param) when param === "signup" => <SignupSuccess />
-  | Some(param) when param === "reset" => <ResetPasswordSuccess />
-  | Some(_) => <GenericSuccess />
+  | Some(Reset) => <ResetPasswordSuccess />
+  | Some(Signup) => <SignupSuccess />
+  | Some(Teach) => <TeachSuccess />
+  | None => <GenericSuccess />
+  };
+
+  let button = switch fromPage {
+  | Some(Reset)
+  | Some(Signup) => <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
+  | Some(Teach) => <Button type_=Primary onClick=backToProfile>"Go Back to Profile"</Button>
   | None => <GenericSuccess />
   };
 
@@ -63,7 +105,7 @@ let default = () => {
         content
       </Flex>
 
-      <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
+      button
     </Flex>
   </PageContainer>
 };
