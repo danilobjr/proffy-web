@@ -7,6 +7,14 @@
 
   background-color: $color-purple;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .icon + .typography {
+    margin-left: 1rem;
+  }
+
   &.-disabled {
     background-color: $color-shapes-disabled;
   }

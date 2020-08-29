@@ -1,10 +1,16 @@
 type t =
+  | LongArrowRight
   | Welcome
   | Success;
 
 [@react.component]
 let make = (~name: t) => {
   switch name {
+  | LongArrowRight =>
+    <svg className="image -long-arrow-right" width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M63 6.00048L0 6.00049" stroke="#E6E6F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M57.999 1.00045L63 6.00145L57.999 11.0024" stroke="#E6E6F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
   | Welcome =>
     <svg className="image -welcome" width="327" height="192" viewBox="0 0 327 192" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M166.914 190.695C167.576 187.228 169.632 184.05 172.519 182.02" stroke="#04D361" strokeWidth="0.779" strokeMiterlimit="10"/>
