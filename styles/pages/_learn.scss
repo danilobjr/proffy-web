@@ -32,15 +32,15 @@
     margin: 1.5rem -1.5rem;
 
     border: none;
-    border-top: 1px solid $color-back-lines-on-white;
+    border-top: 1px solid $color-border-on-white;
   }
 
   > .content .card .schedule .day {
     padding: .625rem 1rem;
     margin-top: .5rem;
 
-    background-color: $color-shapes-2;
-    border: 1px solid $color-back-lines-on-white;
+    background-color: $color-shape-2;
+    border: 1px solid $color-border-on-white;
     border-radius: .5rem;
 
     display: grid;

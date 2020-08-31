@@ -2,7 +2,7 @@
 
 .typography {
   &.-button {
-    color: $color-shapes-1;
+    color: $color-shape-1;
     font: $font-button;
   }
 
@@ -40,7 +40,7 @@
   }
 
   &.-title {
-    color: $color-text-titles;
+    color: $color-text-title;
     font: $font-title;
     line-height: 2.1rem;
 
@@ -63,7 +63,7 @@
   }
 
   &.-primary > .typography.-button {
-    color: $color-shapes-1;
+    color: $color-shape-1;
   }
 }
 
@@ -74,7 +74,7 @@
   }
 
   &.-interactive .typography.-label {
-    color: $color-text-inputs;
+    color: $color-text-input;
   }
 
   &.-checkbox .typography.-label {

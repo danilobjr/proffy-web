@@ -7,8 +7,8 @@
   > .tab {
     height: 3.5rem;
 
-    background-color: $color-shapes-2;
-    border-top: 2px solid $color-back-lines-on-white;
+    background-color: $color-shape-2;
+    border-top: 2px solid $color-border-on-white;
 
     flex-grow: 1;
     display: flex;
@@ -19,22 +19,22 @@
   > .tab > .typography {
     margin-left: 1rem;
 
-    color: $color-text-inputs;
+    color: $color-text-input;
     font-size: .75rem;
     line-height: .75rem;
   }
 
   > .tab > .icon {
-    stroke: $color-text-inputs;
+    stroke: $color-text-input;
   }
 
   > .tab.-focused {
-    background-color: $color-back-hover;
+    background-color: $color-bg-hover;
     border-top-color: $color-purple;
   }
 
   > .tab.-focused > .typography {
-    color: $color-text-titles;
+    color: $color-text-title;
   }
 
   > .tab.-focused > .icon {
