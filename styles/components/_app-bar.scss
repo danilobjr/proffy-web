@@ -12,6 +12,8 @@
   justify-items: center;
   grid-template-areas: "leftcolumn centercolumn rightcolumn";
 
+  z-index: 1;
+
   .leftcolumn {
     grid-area: leftcolumn;
     justify-self: start;
