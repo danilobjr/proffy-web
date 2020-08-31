@@ -6,6 +6,7 @@ let default = () => {
   let router = Next.useRouter();
 
   let goBackPage = _ => router -> Next.Router.push(~url="/home", ());
+  let goSuccessPage = _ => router -> Next.Router.push(~url="/success?from=teach", ());
 
   <PageContainer className="teach-page">
     <AppBar title="Teach" onBackClick=goBackPage />
@@ -79,7 +80,7 @@ let default = () => {
       </Flex>
 
       <Box className="footer" padding=Spacing.Md>
-        <Button type_=Primary>"Save"</Button>
+        <Button type_=Primary onClick=goSuccessPage>"Save"</Button>
       </Box>
     </Box>
   </PageContainer>
