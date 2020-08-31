@@ -7,6 +7,14 @@
     margin-top: 1rem;
     border-bottom: 1px solid $color-purple-another;
 
+    > .icon.-filter {
+      stroke: $color-green;
+    }
+
+    > .icon.-caret-down {
+      stroke: $color-text-on-purple-complement;
+    }
+
     > .text {
       margin-left: 1rem;
 
@@ -67,6 +75,10 @@
 
     .buttons > .favorite {
       width: 4.5rem;
+
+      .icon {
+        stroke: $color-shape-1;
+      }
     }
 
     .buttons > .contact {

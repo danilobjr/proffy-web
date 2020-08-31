@@ -1,3 +1,26 @@
 .icon {
   stroke: $color-purple;
+
+  &.-heart {
+    fill: $color-purple;
+  }
+
+  &.-page-indicator {
+    stroke: none;
+    fill: $color-text-input;
+
+    &-highlight {
+      stroke: none;
+      fill: $color-purple;
+    }
+  }
+
+  &.-whatsapp {
+    stroke: none;
+    fill: $color-green-dark;
+
+    .phone {
+      fill: $color-shape-2;
+    }
+  }
 }

@@ -184,7 +184,7 @@ let default = () => {
       </Tabs.Tab>
 
       <Tabs.Tab focused=(sliderIndex === 1) onClick=handleTabClick(1)>
-        <Icon name=Icon.Heart />
+        <Icon name=Icon.HeartOutline />
         <Text type_=Text.Title>"Favorites"</Text>
       </Tabs.Tab>
     </Tabs>

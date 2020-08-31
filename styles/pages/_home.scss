@@ -22,6 +22,10 @@
       margin-left: auto;
 
       background-color: $color-purple-dark;
+
+      .icon.-power {
+        stroke: $color-text-on-purple-base;
+      }
     }
   }
 
@@ -39,12 +43,21 @@
 
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
 
     > .button-box > .typography.-button {
       margin-top: auto;
+      margin-left: 0;
 
       font-size: 1.25rem;
+    }
+
+    > .button-box > .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      stroke: $color-text-on-purple-title;
     }
 
     > .button-box:last-child {
