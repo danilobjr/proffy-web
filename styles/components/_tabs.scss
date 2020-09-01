@@ -1,0 +1,43 @@
+.tab-container {
+  display: flex;
+  align-items: center;
+
+  z-index: 1;
+
+  > .tab {
+    height: 3.5rem;
+
+    background-color: $color-shape-2;
+    border-top: 2px solid $color-border-on-white;
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > .tab > .typography {
+    margin-left: 1rem;
+
+    color: $color-text-input;
+    font-size: .75rem;
+    line-height: .75rem;
+  }
+
+  > .tab > .icon {
+    stroke: $color-text-input;
+  }
+
+  > .tab.-focused {
+    background-color: $color-bg-hover;
+    border-top-color: $color-purple;
+  }
+
+  > .tab.-focused > .typography {
+    color: $color-text-title;
+  }
+
+  > .tab.-focused > .icon {
+    stroke: $color-purple;
+  }
+}

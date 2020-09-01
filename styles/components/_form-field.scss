@@ -10,8 +10,8 @@
     padding: 1rem;
     margin-top: .25rem;
 
-    background-color: $color-shapes-2;
-    border: 1px solid $color-back-lines-on-white;
+    background-color: $color-shape-2;
+    border: 1px solid $color-border-on-white;
     border-radius: .5rem;
   }
 
@@ -37,8 +37,8 @@
       padding: 1.775rem 1.5rem 0.6rem 1.44rem;
       margin-top: 0;
 
-      background-color: $color-shapes-2;
-      border: 1px solid $color-back-lines-on-white;
+      background-color: $color-shape-2;
+      border: 1px solid $color-border-on-white;
       border-radius: .5rem;
     }
 
@@ -116,8 +116,8 @@
 
       width: 1.5rem;
       height: 1.5rem;
-      background-color: $color-shapes-1;
-      border: 1px solid $color-back-lines-on-white;
+      background-color: $color-shape-1;
+      border: 1px solid $color-border-on-white;
       border-radius: .5rem;
 
       display: block;
@@ -128,6 +128,7 @@
     }
 
     &.-checked > .icon {
+      stroke: $color-shape-1;
       opacity: 1;
     }
   }

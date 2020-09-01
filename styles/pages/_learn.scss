@@ -1,4 +1,4 @@
-.page-container.learn-page {
+.page-container.learn-page > .slider-container > .slider > .view {
   > .hero-container {
     min-height: unset;
   }
@@ -6,6 +6,14 @@
   > .hero-container > .filter {
     margin-top: 1rem;
     border-bottom: 1px solid $color-purple-another;
+
+    > .icon.-filter {
+      stroke: $color-green;
+    }
+
+    > .icon.-caret-down {
+      stroke: $color-text-on-purple-complement;
+    }
 
     > .text {
       margin-left: 1rem;
@@ -31,15 +39,16 @@
   > .content .card .separator {
     margin: 1.5rem -1.5rem;
 
-    border: 1px solid $color-back-lines-on-white;
+    border: none;
+    border-top: 1px solid $color-border-on-white;
   }
 
   > .content .card .schedule .day {
     padding: .625rem 1rem;
     margin-top: .5rem;
 
-    background-color: $color-shapes-2;
-    border: 1px solid $color-back-lines-on-white;
+    background-color: $color-shape-2;
+    border: 1px solid $color-border-on-white;
     border-radius: .5rem;
 
     display: grid;
@@ -66,6 +75,10 @@
 
     .buttons > .favorite {
       width: 4.5rem;
+
+      .icon {
+        stroke: $color-shape-1;
+      }
     }
 
     .buttons > .contact {

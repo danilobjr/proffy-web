@@ -1,12 +1,12 @@
 .card {
-  background-color: $color-shapes-1;
-  border: 1px solid $color-back-lines-on-white;
+  background-color: $color-shape-1;
+  border: 1px solid $color-border-on-white;
   border-radius: $border-radius;
 
   > .title {
     padding-bottom: 0.5rem;
 
-    border-bottom: 1px solid $color-back-lines-on-white;
+    border-bottom: 1px solid $color-border-on-white;
   }
 
   > .title:not(:first-of-type) {
@@ -20,8 +20,8 @@
 }
 
 .card + .footer {
-  background-color: $color-shapes-2;
-  border: 1px solid $color-back-lines-on-white;
+  background-color: $color-shape-2;
+  border: 1px solid $color-border-on-white;
   border-top: none;
   border-radius: $border-radius;
   border-top-left-radius: 0;

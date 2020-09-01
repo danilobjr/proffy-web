@@ -13,28 +13,32 @@ module SlideIndex = {
   let make = (index, max) => {
     switch index {
     | i when i < 0 => Index(0)
-    | i when i > max => Index(0)
+    | i when i > max => Index(max)
     | i => Index(i)
     };
   };
-
-  let multiply = (index, n) => {
-    switch index {
-    | Index(i) => i * n
-    };
-  }
 }
+
+let multiplyIndexBy100 = (index) => {
+  switch index {
+  | SlideIndex.Index(i) => i * 100
+  };
+};
 
 [@react.component]
 let make = (~index=0, ~children) => {
   let childrenCount = React.Children.count(children);
   let maxIndex = childrenCount - 1;
 
-  let index = index
+  let translate = index
     -> SlideIndex.make (maxIndex)
-    -> SlideIndex.multiply (100);
+    -> multiplyIndexBy100
+    -> string_of_int
+    -> (translate => "translate(-" ++ translate ++ "%, 0px)");
 
-  let style = ReactDOM.Style.make(~transform="translate(-" ++ string_of_int(index) ++ "%, 0px)", ());
+    Js.log(translate);
+
+  let style = ReactDOM.Style.make(~transform=translate, ());
 
   <div className="slider-container">
     <Flex className="slider" style>

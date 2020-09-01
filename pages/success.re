@@ -60,14 +60,14 @@ module Url = {
 let default = () => {
   let router = Next.useRouter();
 
-  let backToLogin = e => {
+  let navigateToLoginPage = e => {
     e -> ReactEvent.Mouse.preventDefault;
     router -> Next.Router.push(~url="/login", ());
   };
 
-  let backToProfile = e => {
+  let navigateToTeachPage = e => {
     e -> ReactEvent.Mouse.preventDefault;
-    router -> Next.Router.push(~url="/profile", ());
+    router -> Next.Router.push(~url="/teach", ());
   };
 
   let fromPage = router.query
@@ -83,8 +83,8 @@ let default = () => {
 
   let button = switch fromPage {
   | Some(Reset)
-  | Some(Signup) => <Button type_=Primary onClick=backToLogin>"Go Back to Login"</Button>
-  | Some(Teach) => <Button type_=Primary onClick=backToProfile>"Go Back to Profile"</Button>
+  | Some(Signup) => <Button type_=Primary onClick=navigateToLoginPage>"Go Back to Login"</Button>
+  | Some(Teach) => <Button type_=Primary onClick=navigateToTeachPage>"Back"</Button>
   | None => <GenericSuccess />
   };
 
