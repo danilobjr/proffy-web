@@ -36,8 +36,6 @@ let make = (~index=0, ~children) => {
     -> string_of_int
     -> (translate => "translate(-" ++ translate ++ "%, 0px)");
 
-    Js.log(translate);
-
   let style = ReactDOM.Style.make(~transform=translate, ());
 
   <div className="slider-container">

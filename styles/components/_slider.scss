@@ -1,7 +1,10 @@
 .slider-container {
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  overflow: hidden;
 
   > .slider {
+    height: 100%;
+
     transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s;
     transform: translate(0%, 0px);
   }
@@ -9,6 +12,8 @@
   > .slider > .view {
     width: 100%;
 
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
 
     overflow: auto;
