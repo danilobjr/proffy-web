@@ -1,9 +1,12 @@
 open Box;
+open Classnames;
+open FormField;
 
 [@react.component]
 let default = () => {
   let router = Next.useRouter();
   let (sliderIndex, setSliderIndex) = React.useState(() => 0);
+  let (filterOpen, toggleFilter) = Hooks.useToggle();
 
   let backToHomePage = (_) => router -> Next.Router.push(~url="/home", ());
   let handleTabClick = (index, _) => setSliderIndex(_ => index);
@@ -17,14 +20,35 @@ let default = () => {
           <Text type_=Text.Title purpleBg=true>"Available Tutors"</Text>
 
           <Flex
-            className="filter"
+            className="filter-toggler"
             paddingBottom=Spacing.Sm
             alignItems=AlignItems.Center
+            onClick=(_ => toggleFilter())
           >
             <Icon name=Icon.Filter />
             <Text className="text" purpleBg=true>"Filters"</Text>
-            <Icon name=Icon.CaretDown />
+            <Icon className=append(["-up" -> on(filterOpen)]) name=Icon.CaretDown />
           </Flex>
+
+          <div className=append(["filter-form", "-open" -> on(filterOpen)])>
+            <InputText
+              label="Subject"
+              name="subject"
+            />
+
+            <Flex>
+              <InputText
+                label="Weekday"
+                name="weekday"
+              />
+
+              <InputText
+                className="_margin-left-1"
+                label="Opening hours"
+                name="time"
+              />
+            </Flex>
+          </div>
         </Hero.Container>
 
         <Box className="content" padding=Spacing.Sm>

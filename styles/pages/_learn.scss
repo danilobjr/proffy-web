@@ -3,7 +3,7 @@
     min-height: unset;
   }
 
-  > .hero-container > .filter {
+  > .hero-container > .filter-toggler {
     margin-top: 1rem;
     border-bottom: 1px solid $color-purple-another;
 
@@ -13,6 +13,12 @@
 
     > .icon.-caret-down {
       stroke: $color-text-on-purple-complement;
+
+      transition: transform $transition-input-duration $bezier-curve;
+
+      &.-up {
+        transform: rotateZ(180deg);
+      }
     }
 
     > .text {
@@ -20,6 +26,26 @@
 
       flex: 1;
     }
+  }
+
+  > .hero-container > .filter-form {
+    display: none;
+
+    &.-open {
+      display: block;
+    }
+
+    .typography.-label {
+      color: $color-text-on-purple-base;
+    }
+
+    ._margin-left-1 {
+      margin-left: 1rem;
+    }
+  }
+
+  > .content {
+    overflow-y: auto;
   }
 
   > .content .card > .header {
