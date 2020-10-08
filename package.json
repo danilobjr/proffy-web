@@ -9,7 +9,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "next": "9.5.2",
+    "next": "9.5.4",
     "next-transpile-modules": "4.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
